@@ -11,3 +11,5 @@ export const CONTAINER_SELECTOR = '#container';
 export const FULL_HEART = '❤';
 
 export const EMPTY_HEART = '♡';
+
+const test = 1;
