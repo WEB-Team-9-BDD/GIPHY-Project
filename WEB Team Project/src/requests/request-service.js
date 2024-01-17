@@ -1,5 +1,12 @@
 import { getCategories, getMoviesGeneralInfo, getMoviesFullInfo, getMovieById, getCategory, searchMovies } from '../data/movies.js';
-import { getTrendingURL } from '../common/constants.js';
+import { getSearchGifs, getTrendingURL } from '../common/constants.js';
+
+
+export const loadSearchGifs = async (searchGif) => {
+  const response = await fetch(getSearchGifs(searchGif));
+  const result = await response.json();
+  return result.data;
+}
 
 export const loadTrendingGifs = async () => {
   const response = await fetch(getTrendingURL(30));

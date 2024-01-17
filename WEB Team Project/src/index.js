@@ -1,8 +1,9 @@
-import { ABOUT, FAVORITES, HOME, TRENDING } from './common/constants.js';
+import { ABOUT, CONTAINER_SELECTOR, FAVORITES, HOME, TRENDING } from './common/constants.js';
 import { toggleFavoriteStatus } from './events/favorites-events.js';
 import { q } from './events/helpers.js';
 import { loadPage, renderCategory, renderMovieDetails } from './events/navigation-events.js';
-import { renderSearchItems } from './events/search-events.js';
+import { renderSearchGifs } from './events/search-events.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -33,8 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // search events
-  q('input#search').addEventListener('input', e => {
-    renderSearchItems(e.target.value);
+  q('#search').addEventListener('input', (event) => {
+
+    q(CONTAINER_SELECTOR).innerHTML = renderSearchGifs(event.target.value);
   });
 
   loadPage(HOME);

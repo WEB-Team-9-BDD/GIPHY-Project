@@ -1,10 +1,32 @@
-import { toMovieSimple } from './movie-views.js';
-
-export const toSearchView = (movies, searchTerm) => `
-<div id="movies">
-  <h1>Movies found for "${searchTerm}":</h1>
-  <div class="content">
-    ${movies.map(toMovieSimple).join('\n') || '<p>Add some movies to favorites to see them here.</p>'}
-  </div>
+/* eslint-disable valid-jsdoc */
+/* eslint-disable linebreak-style */
+/**
+ *
+ * @param {Array<{
+* id: string,
+* rating: string,
+* title: string,
+* images: {
+* fixed_width: {
+* url: string,
+* }
+* },
+* user: {
+* avatar_url: string,
+* username:string,
+* }
+* }>} searchGifs
+*/
+export const toSearchView = (text, searchGifs) => {
+  return `<div>
+<h2> Gifs with tag name: #${text}</h2>
+<div #gif-container>
+${searchGifs.map(toSingleGif).join('')}
 </div>
+</div>`;
+};
+
+export const toSingleGif = (gifInfo) => `
+<a href="#/search/${gifInfo.id}">
+<img class="search-item" src="${gifInfo.images.fixed_width.url} alt="${gifInfo.title}""
 `;

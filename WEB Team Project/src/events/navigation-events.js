@@ -1,5 +1,5 @@
 import { ABOUT, CONTAINER_SELECTOR, FAVORITES, HOME, TRENDING } from '../common/constants.js';
-import { loadCategories, loadCategory, loadMovies, loadSingleMovie, loadTrendingGifs } from '../requests/request-service.js';
+import { loadCategories, loadCategory, loadMovies, loadSearchGifs, loadSingleMovie, loadTrendingGifs } from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
 import { toCategoriesView } from '../views/category-view.js';
 import { toFavoritesView } from '../views/favorites-view.js';
@@ -8,6 +8,7 @@ import { toMoviesFromCategoryView, toSingleMovieView } from '../views/movie-view
 import { q, setActiveNav } from './helpers.js';
 import { getFavorites } from '../data/favorites.js';
 import { toTrendingView } from '../views/trending-view.js';
+import { toSearchView } from '../views/search-view.js';
 
 // public API
 export const loadPage = (page = '') => {
