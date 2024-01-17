@@ -1,4 +1,4 @@
-import { HOME } from './common/constants.js';
+import { ABOUT, FAVORITES, HOME, TRENDING } from './common/constants.js';
 import { toggleFavoriteStatus } from './events/favorites-events.js';
 import { q } from './events/helpers.js';
 import { loadPage, renderCategory, renderMovieDetails } from './events/navigation-events.js';
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // show movie events
-    if (event.target.classList.contains('view-movie-btn')) {
+    if (event.target.classList.contains('view-trending-btn')) {
       renderMovieDetails(+event.target.getAttribute('data-movie-id'));
     }
 
@@ -38,5 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   loadPage(HOME);
+  loadPage(TRENDING);
+  loadPage(FAVORITES);
+  loadPage(ABOUT);
 
 });
