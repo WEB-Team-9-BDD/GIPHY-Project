@@ -8,9 +8,9 @@ export const toTrendingView = (trendingGifs) => {
       </section>
     `;
 };
- 
-  const toTrendingItemView = (trendingItem) => {
-    return `
+
+const toTrendingItemView = (trendingItem) => {
+  return `
       <li class="gif-item">
         <a href='#/trending/${trendingItem.id}'>
           <img src="${trendingItem.images.fixed_width.url}"  alt="${trendingItem.title}" />

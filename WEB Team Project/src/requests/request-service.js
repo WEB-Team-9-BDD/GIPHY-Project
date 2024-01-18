@@ -1,4 +1,3 @@
-import { getCategories, getMoviesGeneralInfo, getMoviesFullInfo, getMovieById, getCategory, searchMovies } from '../data/movies.js';
 import { getSearchGifs, getTrendingURL } from '../common/constants.js';
 
 
@@ -15,32 +14,32 @@ export const loadTrendingGifs = async () => {
   return result.data;
 };
 
-export const loadCategories = () => {
-  const categories = getCategories();
+// export const loadCategories = () => {
+//   const categories = getCategories();
   
-  return categories;
-};
+//   return categories;
+// };
 
-export const loadCategory = (id = null) => {
-  const category = getCategory(id);
+// export const loadCategory = (id = null) => {
+//   const category = getCategory(id);
 
-  return category;
-}
+//   return category;
+// }
 
-export const loadMovies = (categoryId = null) => {
-  const movies = getMoviesGeneralInfo(categoryId);
+// export const loadMovies = (categoryId = null) => {
+//   const movies = getMoviesGeneralInfo(categoryId);
 
-  return movies;
-};
+//   return movies;
+// };
 
-export const loadSingleMovie = (id) => {
-  const movie = getMovieById(id);
+// export const loadSingleMovie = (id) => {
+//   const movie = getMovieById(id);
 
-  return movie;  
-};
+//   return movie;  
+// };
 
-export const loadSearchMovies = (searchTerm = '') => {
-  const movies = searchMovies(searchTerm);
+// export const loadSearchMovies = (searchTerm = '') => {
+//   const movies = searchMovies(searchTerm);
 
-  return movies;
-};
+//   return movies;
+// };
