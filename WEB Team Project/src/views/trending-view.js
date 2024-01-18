@@ -8,13 +8,7 @@ export const toTrendingView = (trendingGifs) => {
       </section>
     `;
 };
-
-const toTrendingItemView = (trendingItem) => {
-  return `
-      <li>
-    
-  };
-  
+ 
   const toTrendingItemView = (trendingItem) => {
     return `
       <li class="gif-item">
