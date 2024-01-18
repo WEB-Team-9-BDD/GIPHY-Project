@@ -27,6 +27,8 @@ ${searchGifs.map(toSingleGif).join('')}
 };
 
 export const toSingleGif = (gifInfo) => `
+<div class="gif-item">
 <a href="#/search/${gifInfo.id}">
-<img class="search-item" src="${gifInfo.images.fixed_width.url} alt="${gifInfo.title}""
+<img class="search-item" src="${gifInfo.images.fixed_width.url} alt="${gifInfo.title}"
+</div>
 `;

@@ -26,14 +26,16 @@ div#app {
 
 header {
   grid-area: header;
-  height: 200px;
-  background: url('../images/banner-top.png');
+  height: 50px;
+  background-color: black;
+  /* background: url('../images/banner-top.png'); */
 }
 
 nav {
   grid-area: menu;
   height: 60px;
-  background: url('../images//banner-bottom.png');
+  background-color: black;
+  /* background: url('../images//banner-bottom.png'); */
   font-size: 1.75em;
   line-height: 60px;
   padding: 20px;
@@ -293,4 +295,12 @@ div.movie-detailed div.movie-info {
   color: rgb(229, 210, 255);
 }
 
-/* End about styles */
+/* NEW STYLES */
+
+.nav-links {
+  margin-bottom: 5px; /* Adjust this value to change the space between the navigation tabs and the search bar */
+}
+
+.search-bar {
+  margin-top: 5px; /* Adjust this value to change the space between the search bar and the navigation tabs */
+}

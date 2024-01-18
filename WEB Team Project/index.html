@@ -12,12 +12,21 @@
   <div id="app">
     <header></header>
     <nav>
-      <a href="#" class="nav-link" data-page="home">Home</a> | 
-      <a href="#" class="nav-link" data-page="trending">Trending</a> |
-      <a href="#" class="nav-link" data-page="favorites">Favorites</a>
-      <input id="search" type="text" placeholder="Search">
+      <div class="nav-links">
+        <a href="#" class="nav-link" data-page="home">Home</a> | 
+        <a href="#" class="nav-link" data-page="trending">Trending</a> |
+        <a href="#" class="nav-link" data-page="favorites">Favorites</a> |
+        <a href="#" class="nav-link" data-page="upload">Upload</a>
+        <br>
+      </div>
+      <br>
+      <div class="search-bar">
+        <input id="search" type="search" placeholder="Search">
+        <span><button id="search-btn">Search</button></span>
+      </div>
       <a href="#" class="nav-link" data-page="about">About</a>
     </nav>
+    
     <div id="container">
       <!-- start placeholders -->
 
