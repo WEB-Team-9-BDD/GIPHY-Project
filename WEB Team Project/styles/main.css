@@ -164,6 +164,20 @@ div.category {
   color: white;
 }
 
+.gif-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.gif-grid img {
+  width: 80%; 
+  height: auto; 
+  aspect-ratio: 1 / 1; 
+}
+
 /* End categories styles */
 
 
