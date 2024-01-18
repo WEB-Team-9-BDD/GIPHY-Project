@@ -279,4 +279,12 @@ div.movie-detailed div.movie-info {
   color: rgb(229, 210, 255);
 }
 
-/* End about styles */
+/* NEW STYLES */
+
+.nav-links {
+  margin-bottom: 5px; /* Adjust this value to change the space between the navigation tabs and the search bar */
+}
+
+.search-bar {
+  margin-top: 5px; /* Adjust this value to change the space between the search bar and the navigation tabs */
+}
