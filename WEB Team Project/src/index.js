@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // search events
   q('#search').addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
-      q(CONTAINER_SELECTOR).innerHTML = renderSearchGifs(event.target.value);
+      renderSearchGifs(event.target.value);
     }
   });
 
