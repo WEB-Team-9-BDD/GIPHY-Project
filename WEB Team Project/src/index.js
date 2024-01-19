@@ -27,12 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
   q('#search').addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
       renderSearchGifs(event.target.value);
+      q('#search').value = '';
     }
 
     q('#search-button').addEventListener('click', () => {
-      const text = q('#search').value;
-      if (text.length > 0) {
-        renderSearchGifs(text);
+
+      if (q('#search').value.length > 0) {
+        renderSearchGifs(q('#search').value);
+        q('#search').value = '';
       }
     });
   });
