@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   loadPage(HOME);
-  loadPage(TRENDING);
-  loadPage(FAVORITES);
-  loadPage(ABOUT);
+  // loadPage(TRENDING);
+  // loadPage(FAVORITES);
+  // loadPage(ABOUT);
 
 });
