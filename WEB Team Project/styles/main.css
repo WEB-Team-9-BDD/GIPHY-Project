@@ -349,3 +349,28 @@ div.movie-detailed div.movie-info {
   display: flex;
   flex-direction: column;
 }
+
+/*Form Buttons*/
+/*Choose file button*/
+#file::file-selector-button {
+  margin-top: 5px;
+  border: 1px solid rgb(78, 43, 0);
+  color: rgb(78, 43, 0);
+  background-color: burlywood;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/*Upload button*/
+#upload {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: x-large;
+  color: rgb(78, 43, 0);
+  background-color: burlywood;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid rgb(78, 43, 0);
+  cursor: pointer;
+}
