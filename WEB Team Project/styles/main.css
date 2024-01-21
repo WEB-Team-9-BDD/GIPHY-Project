@@ -416,3 +416,29 @@ div.movie-detailed div.movie-info {
     transform: rotate(360deg);
   }
 }
+
+/*When GIF successfully added */
+.success-container {
+  border-radius: 25px;
+}
+
+.success-upload {
+  background-color: #a6e700;
+  background-image: linear-gradient(to bottom right, #a6e700, #5ac922);
+  color: white;
+  border-radius: 25px;
+  padding: 5px;
+  text-align: center;
+}
+
+#success-image {
+  text-align: center;
+}
+
+#success-image img {
+  text-align: center;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 10px 10px 5px #5ac92270;
+}
