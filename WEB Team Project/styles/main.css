@@ -442,3 +442,28 @@ div.movie-detailed div.movie-info {
   margin: 5px;
   box-shadow: 10px 10px 5px #5ac92270;
 }
+
+/*When GIF upload fail*/
+.fail-container {
+  border-radius: 25px;
+}
+.fail-message {
+  background-color: #e7665f;
+  background-image: linear-gradient(to bottom right, #f2764c, #d30000);
+  color: white;
+  border-radius: 25px;
+  padding: 5px;
+  text-align: center;
+}
+/*Button try again on failed container*/
+.try-again{
+  margin: 20px;
+  border: none;
+  padding: 15px 30px;
+  font-size: x-large;
+  color: #d30000;
+  background-color:white;
+  padding: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+}
