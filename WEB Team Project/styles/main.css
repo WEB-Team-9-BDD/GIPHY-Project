@@ -374,3 +374,45 @@ div.movie-detailed div.movie-info {
   border: 1px solid rgb(78, 43, 0);
   cursor: pointer;
 }
+
+/*Loading page container*/
+.load-container {
+  display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 50%;
+  padding: 30px 15px;
+  border-radius: 25px;
+  background-color: #efc404;
+  background-image: linear-gradient(to bottom right, #faef55, #efc404);
+  color: white;
+}
+
+/*Loading page text*/
+.load-container h2{
+  padding: 10px;
+  margin: 10px;
+  margin-right: 25px;
+}
+
+/*Loading animation*/
+.loader {
+  border: 15px solid #f3f3f3;
+  border-top: 15px solid #efc404;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
