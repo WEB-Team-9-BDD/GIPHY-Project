@@ -17,11 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       loadPage(event.target.getAttribute('data-page'));
     }
+
     // in case of failure of GIF upload
     if (event.target.classList.contains('try-again')) {
 
       loadPage(UPLOAD);
     }
+
     // toggle favorite event
     if (event.target.classList.contains('favorite')) {
       toggleFavoriteStatus(+event.target.getAttribute('data-movie-id'));
@@ -35,39 +37,40 @@ document.addEventListener('DOMContentLoaded', () => {
       renderSearchGifs(event.target.value);
       q('#search').value = '';
     }
-
-    q('#search-button').addEventListener('click', () => {
-
-      if (q('#search').value.length > 0) {
-        renderSearchGifs(q('#search').value);
-        q('#search').value = '';
-      }
-    });
-
-    // upload events
-    document.addEventListener('submit', (ev) => {
-      ev.preventDefault();
-
-      const fileInput = q('#file');
-      const username = q('#username').value;
-      const tags = q('#tags').value;
-      // const urlInput = q('#url').value;
-
-      const file = fileInput.files[0];
-      if (!file) {
-        return renderFailure();
-      }
-      const url = URL.createObjectURL(file);
-
-      const formData = new FormData();
-      formData.append('file', file, 'giphy.gif');
-
-      // the working version with url from file
-      uploadGif(username, url, tags, formData);
-      renderLoadingView();
-      return 'ok';
-    });
   });
+
+  q('#search-button').addEventListener('click', () => {
+
+    if (q('#search').value.length > 0) {
+      renderSearchGifs(q('#search').value);
+      q('#search').value = '';
+    }
+  });
+
+  // upload events
+  document.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const fileInput = q('#file');
+    const username = q('#username').value;
+    const tags = q('#tags').value;
+    // const urlInput = q('#url').value;
+
+    const file = fileInput.files[0];
+    if (!file) {
+      return renderFailure();
+    }
+    const url = URL.createObjectURL(file);
+
+    const formData = new FormData();
+    formData.append('file', file, 'giphy.gif');
+
+    // the working version with url from file
+    uploadGif(username, url, tags, formData);
+    renderLoadingView();
+    return 'ok';
+  });
+
 
   loadPage(HOME);
   // loadPage(TRENDING);
