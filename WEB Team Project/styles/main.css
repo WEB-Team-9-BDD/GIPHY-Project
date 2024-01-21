@@ -317,3 +317,35 @@ div.movie-detailed div.movie-info {
   border-radius: 25px;
   overflow: auto;
 }
+
+/*Form labels*/
+.label {
+  margin-left: 10px;
+  font-size: 25px;
+  padding: 3px;
+}
+
+/*Form input fields*/
+.upload-element {
+  margin-left: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 25px;
+  padding: 15px;
+  padding-left: 20px;
+
+}
+
+.upload-container>h2 {
+  text-align: center;
+}
+
+.uploaded-container h2 {
+  text-align: center;
+}
+
+/*Upload form*/
+#form {
+  display: flex;
+  flex-direction: column;
+}
