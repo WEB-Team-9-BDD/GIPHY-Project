@@ -7,13 +7,16 @@ export const toFavoritesView = async (favGifsId) => {
   const result = await loadRandomGif();
 
   if (favGifsId.length === 0) {
-    return `<p>Add some GIFs to favorites to see them here.</p>
+    return `<div id="no-favorites">
+    <h1>Favorite GIFs:</h1>
+    <h2>Add some GIFs to favorites to see them here.</h2>
     <li class="randomGif">
     <img src="${result.images.fixed_width.url}" width="150" height="150" alt="${result.title}"
     <div class="gif-details">
       <p>${result.title}</p>
     </div>
-    </li>`;
+    </li>
+    </div>`;
   }
 
   const favGifsIds = getFavorites().join(', ');

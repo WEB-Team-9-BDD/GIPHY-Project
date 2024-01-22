@@ -654,3 +654,68 @@ div.movie-detailed div.movie-info {
   50% { box-shadow: 0 0 10px 2px rgba(31, 209, 249, 0.7), 0 0 20px 2px rgba(182, 33, 254, 0.7); }
   100% { box-shadow: 0 0 0 0 rgba(31, 209, 249, 0.7), 0 0 0 0 rgba(182, 33, 254, 0.7); }
 }
+
+/*Favorite section*/
+/*Favorite button*/
+.heart-wrapper {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background-color: white;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 3px 29px 0px rgba(160, 160, 160, 1);
+  -moz-box-shadow: 0px 3px 29px 0px rgba(160, 160, 160, 1);
+  box-shadow: 0px 3px 29px 0px rgba(160, 160, 160, 1);
+  transition: 0.3s;
+}
+
+.heart-wrapper:hover {
+  -webkit-box-shadow: 0px 2px 15px 0px rgba(117, 117, 117, 1);
+  -moz-box-shadow: 0px 2px 15px 0px rgba(117, 117, 117, 1);
+  box-shadow: 0px 2px 15px 0px rgba(117, 117, 117, 1);
+}
+
+.add-favorite-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 12px 24px; 
+  color: #333; 
+}
+
+.add-favorite-btn.active {
+  color: #ff0000; 
+}
+
+.gif-item{
+  margin-bottom: 5%;
+}
+
+#no-favorites h1 {
+  display: flex;
+  font-size: 250%;
+  text-align: center;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  align-items: center; 
+}
+
+#no-favorites h2 {
+  display: flex;
+  font-size: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  align-items: center; 
+}
+
+.noGIFs{
+  display: flex;
+  font-size: 100%;
+}
