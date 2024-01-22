@@ -24,7 +24,7 @@ https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=${limit}&offset=
 export const getSearchGifs = (q='', limit = 20, offset = 0) => `
 https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${q}&limit=${limit}&offset=${offset}&rating=g`;
 
-export const getUploadedURL = (username, url = '', tags) => `
-https://upload.giphy.com/v1/gifs?api_key=${API_KEY}&username=${username}&file=${url}&tags=${tags}`;
+export const getUploadedURL = (username, url = '', sourceUrl = '', tags) => `
+https://upload.giphy.com/v1/gifs?api_key=${API_KEY}&username=${username}&file=${url}&source_image_url=${sourceUrl}&tags=${tags}`;
 
 export const getGifByID = (id) => `https://api.giphy.com/v1/gifs/${id}?api_key=${API_KEY}&rating=g`;
