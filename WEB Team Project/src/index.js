@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // search events
   q('#search').addEventListener('keypress', (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && q('#search').value!=='') {
       renderSearchGifs(event.target.value);
       q('#search').value = '';
     }
