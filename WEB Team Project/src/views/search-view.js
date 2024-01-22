@@ -1,3 +1,5 @@
+import { renderFavoriteStatus } from '../events/favorites-events.js';
+
 /* eslint-disable valid-jsdoc */
 /* eslint-disable linebreak-style */
 /**
@@ -32,6 +34,7 @@ export const toSingleGif = (gifInfo) => `
 <img class="gif-img-item" src="${gifInfo.images.fixed_width.url} alt="${gifInfo.title}">
 </a>
 <br>
+${renderFavoriteStatus(gifInfo.id)}
 <button class="details-button" data-gif-id="${gifInfo.id}">Details</button>
 </div>
 `;
