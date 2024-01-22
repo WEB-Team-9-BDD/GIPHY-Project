@@ -467,3 +467,89 @@ div.movie-detailed div.movie-info {
   border-radius: 25px;
   cursor: pointer;
 }
+
+/*Details style*/
+
+.gif-card{
+  width: 30%; /* Adjust this value */
+  margin: 0 auto; /* Centers the card horizontally */
+  margin-top: 20px; /* Adjust this value to move the card higher or lower */
+  grid-template-columns: 1fr;
+  grid-template-rows: 280px 280px 280px;
+  grid-template-areas: 
+    "image"
+    "text";
+
+  border-radius: 18px;
+  background: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+}
+
+.card-image {
+  grid-area: image;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+}
+
+.gif-detail {
+  grid-area: text;
+}
+
+.gif-detail p {
+  color: #080111;
+  font-size:15px;
+  font-weight: 300;
+}
+
+.gif-detail h2 {
+  margin-top:20px;
+  font-size:56px;
+  font-weight: bold;
+
+}
+
+.details-button {
+  position: relative;
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.details-button:after {
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   background-color: #1fd1f9;
+background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  transition: all 0.3s ease;
+}
+.details-button:hover {
+  background: transparent;
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  color: #fff;
+}
+.details-button:hover:after {
+  -webkit-transform: scale(2) rotate(180deg);
+  transform: scale(2) rotate(180deg);
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+}

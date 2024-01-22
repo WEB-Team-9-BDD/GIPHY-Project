@@ -1,7 +1,7 @@
 import { ABOUT, FAVORITES, HOME, TRENDING, UPLOAD } from './common/constants.js';
 import { toggleFavoriteStatus } from './events/favorites-events.js';
 import { q } from './events/helpers.js';
-import { loadPage } from './events/navigation-events.js';
+import { loadPage, renderDetails } from './events/navigation-events.js';
 import { renderSearchGifs } from './events/search-events.js';
 import { renderFailure, renderLoadingView } from './events/upload-events.js';
 import { uploadGif } from './requests/request-service.js';
@@ -27,6 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // toggle favorite event
     if (event.target.classList.contains('favorite')) {
       toggleFavoriteStatus(+event.target.getAttribute('data-movie-id'));
+    }
+
+    // toggle details event
+    if (event.target.classList.contains('details-button')) {
+      renderDetails(event.target.getAttribute('data-gif-id'));
     }
 
   });

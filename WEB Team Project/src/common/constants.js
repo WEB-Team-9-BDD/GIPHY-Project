@@ -26,3 +26,5 @@ https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${q}&limit=${limit}&of
 
 export const getUploadedURL = (username, url = '', tags) => `
 https://upload.giphy.com/v1/gifs?api_key=${API_KEY}&username=${username}&file=${url}&tags=${tags}`;
+
+export const getGifByID = (id) => `https://api.giphy.com/v1/gifs/${id}?api_key=${API_KEY}&rating=g`;

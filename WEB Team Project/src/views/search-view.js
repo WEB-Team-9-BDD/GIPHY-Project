@@ -31,5 +31,7 @@ export const toSingleGif = (gifInfo) => `
 <a href="#/search/${gifInfo.id}">
 <img class="gif-img-item" src="${gifInfo.images.fixed_width.url} alt="${gifInfo.title}">
 </a>
+<br>
+<button class="details-button" data-gif-id="${gifInfo.id}">Details</button>
 </div>
 `;

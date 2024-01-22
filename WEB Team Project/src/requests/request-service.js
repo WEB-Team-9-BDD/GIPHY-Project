@@ -1,4 +1,4 @@
-import { getSearchGifs, getTrendingURL, getUploadedURL } from '../common/constants.js';
+import { getSearchGifs, getTrendingURL, getUploadedURL, getGifByID } from '../common/constants.js';
 import { renderFailure, renderSuccess } from '../events/upload-events.js';
 
 export const uploadGif = async (username, url, tags, formData) => {
@@ -34,6 +34,18 @@ export const loadTrendingGifs = async () => {
 
   return result.data;
 };
+
+export const loadDetails = async (id) => {
+  
+  const response = await fetch (getGifByID(id));
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw new Error(`Failed to load gif details for id: ${id}`);
+  }
+
+  return result.data;
+}
 
 // export const loadCategories = () => {
 //   const categories = getCategories();
