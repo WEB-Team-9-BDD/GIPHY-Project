@@ -1,4 +1,3 @@
-import { getRandomGifs, getSearchGifs, getTrendingURL } from '../common/constants.js';
 import { API_KEY } from '../common/constants.js';
 import { getSearchGifs, getTrendingURL, getUploadedURL, getGifByID } from '../common/constants.js';
 import { renderFailure, renderSuccess } from '../events/upload-events.js';
