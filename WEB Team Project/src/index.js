@@ -56,25 +56,28 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('submit', (event) => {
     event.preventDefault();
 
-
     const fileInput = q('#file');
-    const username = q('#username').value;
-    const tags = q('#tags').value;
-    // const urlInput = q('#url').value;
+    const username = q('#username').value.trim();
+    const tags = q('#tags').value.trim();
+    let urlInput = q('#url').value;
+    let url;
+    let formData;
+    if (urlInput) {
+      uploadGif(username, url = '', urlInput, tags, formData = '');
+      renderLoadingView();
+    } else if (!urlInput && fileInput) {
+      const file = fileInput.files[0];
+      if (!file) {
+        return renderFailure();
+      }
+      url = URL.createObjectURL(file);
+      formData = new FormData();
+      formData.append('file', file, 'giphy.gif');
 
-    const file = fileInput.files[0];
-    if (!file) {
-      return renderFailure();
+      uploadGif(username, url, urlInput = '', tags, formData);
+      renderLoadingView();
     }
-    const url = URL.createObjectURL(file);
-
-    const formData = new FormData();
-    formData.append('file', file, 'giphy.gif');
-
-    // the working version with url from file
-    uploadGif(username, url, tags, formData);
-    renderLoadingView();
-    return 'ok';
+    return 'Ok!';
   });
 
 
