@@ -1,8 +1,9 @@
 import { ABOUT, FAVORITES, HOME, TRENDING } from './common/constants.js';
-import { toggleFavoriteStatus } from './events/favorites-events.js';
+import { renderFavoriteStatus, toggleFavoriteStatus } from './events/favorites-events.js';
 import { q } from './events/helpers.js';
 import { loadPage } from './events/navigation-events.js';
 import { renderSearchGifs } from './events/search-events.js';
+import { renderFavorites } from './events/navigation-events.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,8 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // toggle favorite event
-    if (event.target.classList.contains('favorite')) {
-      toggleFavoriteStatus(+event.target.getAttribute('data-movie-id'));
+    if (event.target.classList.contains('add-favorite-btn')) {
+      const gifId = event.target.getAttribute('data-gif-id');
+      toggleFavoriteStatus(gifId);
+      const favorite = document.querySelector('#favorite');
+      if (favorite.classList.contains('active')) {
+        renderFavorites();
+      }
+      //toggleFavoriteStatus(+event.target.getAttribute('data-gif-id'));
     }
 
   });
