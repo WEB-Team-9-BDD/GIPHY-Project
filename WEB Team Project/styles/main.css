@@ -623,7 +623,7 @@ div.movie-detailed div.movie-info {
   transform: translate(-50%, -50%);
   z-index: 1;
   padding: 5px;
-  background: rgb(53, 50, 50);
+  background: rgba(53, 50, 50, 0.5);
   width: 40%;
   height: auto;
   max-width: 300px;
