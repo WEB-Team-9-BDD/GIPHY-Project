@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
       renderDetails(event.target.getAttribute('data-gif-id'));
     }
 
+    if (event.target.classList.contains('show-uploaded')) {
+      renderUploadedGifs();
+    }
   });
 
   // search events
