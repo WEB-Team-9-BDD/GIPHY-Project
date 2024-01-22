@@ -1,4 +1,4 @@
-import { ABOUT, FAVORITES, HOME, TRENDING, UPLOAD } from './common/constants.js';
+import { ABOUT, API_KEY, FAVORITES, HOME, TRENDING, UPLOAD } from './common/constants.js';
 import { renderFavoriteStatus, toggleFavoriteStatus } from './events/favorites-events.js';
 import { q } from './events/helpers.js';
 import { loadPage, renderDetails } from './events/navigation-events.js';
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // search events
   q('#search').addEventListener('keypress', (event) => {
-    if (event.key === 'Enter' && q('#search').value!=='') {
+    if (event.key === 'Enter' && q('#search').value !== '') {
       renderSearchGifs(event.target.value);
       q('#search').value = '';
     }
@@ -66,18 +66,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const fileInput = q('#file');
     const tags = q('#tags').value.trim();
     let urlInput = q('#url').value;
+
     let url;
-    let formData;
+    const formData = new FormData();
+    formData.append('api_key', API_KEY);
+
     if (urlInput) {
       uploadGif(url = '', urlInput, tags, formData = '');
       renderLoadingView();
+
     } else if (!urlInput && fileInput) {
+
       const file = fileInput.files[0];
       if (!file) {
         return renderFailure();
       }
+
       url = URL.createObjectURL(file);
-      formData = new FormData();
       formData.append('file', file, 'giphy.gif');
 
       uploadGif(url, urlInput = '', tags, formData);
@@ -88,8 +93,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   loadPage(HOME);
-  // loadPage(TRENDING);
-  // loadPage(FAVORITES);
-  // loadPage(ABOUT);
-
 });
