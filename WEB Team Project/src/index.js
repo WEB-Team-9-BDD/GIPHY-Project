@@ -92,5 +92,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  loadPage(HOME);
+  loadPage(TRENDING);
 });

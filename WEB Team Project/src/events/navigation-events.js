@@ -1,8 +1,8 @@
-import { ABOUT, CONTAINER_SELECTOR, FAVORITES, HOME, TRENDING, UPLOAD } from '../common/constants.js';
+import { ABOUT, CONTAINER_SELECTOR, FAVORITES, TRENDING, UPLOAD } from '../common/constants.js';
 import { loadTrendingGifs, loadDetails } from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
 // import { toFavoritesView } from '../views/favorites-view.js';
-import { toHomeView } from '../views/home-view.js';
+
 import { q, setActiveNav } from './helpers.js';
 import { getFavorites } from '../data/favorites.js';
 import { toTrendingView } from '../views/trending-view.js';
@@ -15,10 +15,6 @@ import { toFavoritesView } from '../views/favorites-view.js';
 export const loadPage = (page = '') => {
 
   switch (page) {
-
-  case HOME:
-    setActiveNav(HOME);
-    return renderHome();
 
   case TRENDING:
     setActiveNav(TRENDING);
@@ -47,9 +43,7 @@ export const loadPage = (page = '') => {
 
 // private functions
 
-const renderHome = () => {
-  q(CONTAINER_SELECTOR).innerHTML = toHomeView();
-};
+
 
 const renderTrending = async () => {
   const trendingGifs = await loadTrendingGifs();
