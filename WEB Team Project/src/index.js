@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     formData.append('api_key', API_KEY);
 
     if (urlInput) {
-      uploadGif(url = '', urlInput, tags, formData = '');
+      uploadGif(url = '', urlInput, tags, formData);
       renderLoadingView();
 
     } else if (!urlInput && fileInput) {
