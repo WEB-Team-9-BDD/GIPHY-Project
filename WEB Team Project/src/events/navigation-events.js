@@ -30,7 +30,7 @@ export const loadPage = (page = '') => {
     setActiveNav(ABOUT);
     return renderAbout();
 
-    case UPLOAD:
+  case UPLOAD:
     setActiveNav(UPLOAD);
     return renderUpload();
     /* if the app supports error login, use default to log mapping errors */
@@ -51,11 +51,10 @@ const renderTrending = async () => {
   q(CONTAINER_SELECTOR).innerHTML = toTrendingView(trendingGifs);
 };
 
-const renderFavorites = () => {
+export const renderFavorites = async () => {
   const favorites = getFavorites();
-  const movies = favorites.map(id => loadSingleMovie(id));
 
-  q(CONTAINER_SELECTOR).innerHTML = toFavoritesView(movies);
+  q(CONTAINER_SELECTOR).innerHTML = await toFavoritesView(favorites);
 };
 
 const renderAbout = () => {
@@ -64,4 +63,4 @@ const renderAbout = () => {
 
 const renderUpload = () => {
   q(CONTAINER_SELECTOR).innerHTML = toUploadView();
-}
+};
