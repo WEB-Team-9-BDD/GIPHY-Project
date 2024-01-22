@@ -53,23 +53,10 @@ export const loadRandomGif = async () => {
   }
 };
 
-export const fetchGifById = async (gifId) => {
-  try {
-    const response = await fetch(`https://api.giphy.com/v1/gifs/${gifId}?api_key=${API_KEY}`);
-    const data = await response.json();
-    console.log(`Here we catch GIFId favs: ${data}`);
-    return data.data;
-  } catch (error) {
-    console.error('Error fetching GIF by ID:', error);
-    return null;
-  }
-};
-
 export const fetchFavorites = async (gifIds) => {
   try {
     const response = await fetch(`https://api.giphy.com/v1/gifs?api_key=${API_KEY}&ids=${gifIds}`);
     const data = await response.json();
-    console.log(`Here we catch GIFId favs: ${data}`);
     return data.data;
   } catch (error) {
     console.error('Error fetching GIF by ID:', error);

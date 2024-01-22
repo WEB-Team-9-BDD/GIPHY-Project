@@ -1,8 +1,6 @@
-// import { toMovieSimple } from './movie-views.js';
 import { renderFavoriteStatus } from '../events/favorites-events.js';
 import { API_KEY } from '../common/constants.js';
 import { fetchFavorites, loadRandomGif } from '../requests/request-service.js';
-import { fetchGifById } from '../requests/request-service.js';
 import { getFavorites } from '../data/favorites.js';
 
 export const toFavoritesView = async (favGifsId) => {
@@ -18,7 +16,6 @@ export const toFavoritesView = async (favGifsId) => {
     </li>`;
   }
 
-  //const favGifs = await Promise.all(favGifsId.map(id => fetchGifById(id)));
   const favGifsIds = getFavorites().join(', ');
   console.log(favGifsIds);
   const favGifs = await fetchFavorites(favGifsIds);
@@ -38,13 +35,3 @@ export const toFavoritesView = async (favGifsId) => {
   </div>`;;
 };
 
-
-// const toGifSimple = (gif) => `
-// <div class="gif">
-//   <h1>${gif.title}</h1>
-//   <h2>${gif.year}</h2>
-//   <img src="${gif.poster}"><br>
-//   <button class="" gif-id="${gif.id}">View details</button>
-//   ${renderFavoriteStatus(gif.id)}
-// </div>
-// `;
