@@ -5,9 +5,6 @@ export const toUploadView = () => `
 <form id="form">
         <input class="upload-element" id="file" type="file" accept="image/gif">
 
-        <label class="label" for="username">Username:</label>
-        <input class="upload-element" type="text" id="username" name="username">
-
         <label class="label" for="tags">Tags:</label>
         <input class="upload-element" id="tags" type="text" name="tags">
         
