@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('submit', (event) => {
     event.preventDefault();
 
+
     const fileInput = q('#file');
     const username = q('#username').value;
     const tags = q('#tags').value;
