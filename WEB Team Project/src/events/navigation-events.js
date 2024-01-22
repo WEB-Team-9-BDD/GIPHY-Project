@@ -9,6 +9,7 @@ import { toTrendingView } from '../views/trending-view.js';
 // import { toSearchView } from '../views/search-view.js';
 import { toUploadView } from '../views/upload-view.js';
 import { toGifDetailsView } from '../views/details-view.js';
+import { toFavoritesView } from '../views/favorites-view.js';
 
 // public API
 export const loadPage = (page = '') => {
@@ -60,9 +61,6 @@ export const renderFavorites = async () => {
   const favorites = getFavorites();
 
   q(CONTAINER_SELECTOR).innerHTML = await toFavoritesView(favorites);
-  // const movies = favorites.map(id => loadSingleMovie(id));
-
-  // q(CONTAINER_SELECTOR).innerHTML = toFavoritesView(movies);
 };
 
 const renderAbout = () => {
