@@ -6,7 +6,8 @@ body {
 }
 
 body {
-  background: url('../images/dark-linen.png') repeat;
+  background: url('../images/projectStars.jpg') no-repeat;
+  background-attachment: fixed;
   font-family: 'Poppins';
 }
 
@@ -599,6 +600,7 @@ div.movie-detailed div.movie-info {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   overflow: auto;
+  display: none;
   
 }
 
