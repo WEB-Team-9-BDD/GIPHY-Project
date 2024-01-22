@@ -64,13 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
 
     const fileInput = q('#file');
-    const username = q('#username').value.trim();
     const tags = q('#tags').value.trim();
     let urlInput = q('#url').value;
     let url;
     let formData;
     if (urlInput) {
-      uploadGif(username, url = '', urlInput, tags, formData = '');
+      uploadGif(url = '', urlInput, tags, formData = '');
       renderLoadingView();
     } else if (!urlInput && fileInput) {
       const file = fileInput.files[0];
@@ -81,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
       formData = new FormData();
       formData.append('file', file, 'giphy.gif');
 
-      uploadGif(username, url, urlInput = '', tags, formData);
+      uploadGif(url, urlInput = '', tags, formData);
       renderLoadingView();
     }
     return 'Ok!';
