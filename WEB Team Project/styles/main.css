@@ -7,7 +7,7 @@ body {
 
 body {
   background: url('../images/dark-linen.png') repeat;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins';
 }
 
 div#app {
@@ -300,10 +300,11 @@ div.movie-detailed div.movie-info {
 /*Gif upload container*/
 .upload-container {
   min-width: 50%;
-  background-color: wheat;
+  /* background-color: wheat; */
+  background: linear-gradient(315deg, #b621fe 0%, #1fd1f9 98%);
   padding: 30px 15px;
-  color: rgb(78, 43, 0);
-  border-right: rgb(78, 43, 0) solid;
+  color: white(0, 0, 0);
+  border-right: rgb(0, 0, 0) solid;
   border-radius: 25px;
   overflow: auto;
 }
@@ -312,8 +313,8 @@ div.movie-detailed div.movie-info {
 .uploaded-container {
   min-width: 50%;
   padding: 30px 15px;
-  background-color: burlywood;
-  color: rgb(78, 43, 0);
+  background: linear-gradient(315deg, #1fd1f9 0%, #b621fe 90%);
+  color: white;
   border-radius: 25px;
   overflow: auto;
 }
@@ -323,6 +324,7 @@ div.movie-detailed div.movie-info {
   margin-left: 10px;
   font-size: 25px;
   padding: 3px;
+  /* font-weight: bold; */
 }
 
 /*Form input fields*/
@@ -354,32 +356,84 @@ div.movie-detailed div.movie-info {
 /*Choose file button*/
 #file::file-selector-button {
   margin-top: 5px;
-  border: 1px solid rgb(78, 43, 0);
-  color: rgb(78, 43, 0);
-  background-color: burlywood;
+  border: none;
+  color: #7700b3cc;
+  background-color: rgb(255, 255, 255);
   padding: 5px 10px;
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 /*Upload button*/
+
 #upload {
+  font-size: x-large;
+  color: #7700b3cc;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  line-height: 55px;
+  display: block;
+  margin: 40px auto 20px auto;
+  padding: 0px 40px;
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+}
+
+#upload:hover {
+  color: #ffffff;
+  background: transparent;
+  box-shadow: none;
+}
+
+#upload:before,
+#upload:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #ffffff;
+  box-shadow:
+    -1px -1px 5px 0px #fff,
+    7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
+  transition: 400ms ease all;
+}
+
+#upload:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+#upload:hover:before,
+#upload:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+/* #upload {
   margin-top: 20px;
   margin-left: 10px;
   font-size: x-large;
-  color: rgb(78, 43, 0);
-  background-color: burlywood;
+  color: #7700b3cc;
+  background-color: white;
   padding: 10px;
   border-radius: 25px;
-  border: 1px solid rgb(78, 43, 0);
+  border: 3px solid #7700b3cc;
+  border: none;
   cursor: pointer;
-}
+} */
 
 /*Loading page container*/
 .load-container {
   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   min-width: 50%;
@@ -391,7 +445,7 @@ div.movie-detailed div.movie-info {
 }
 
 /*Loading page text*/
-.load-container h2{
+.load-container h2 {
   padding: 10px;
   margin: 10px;
   margin-right: 25px;
@@ -447,6 +501,7 @@ div.movie-detailed div.movie-info {
 .fail-container {
   border-radius: 25px;
 }
+
 .fail-message {
   background-color: #e7665f;
   background-image: linear-gradient(to bottom right, #f2764c, #d30000);
@@ -455,14 +510,15 @@ div.movie-detailed div.movie-info {
   padding: 5px;
   text-align: center;
 }
+
 /*Button try again on failed container*/
-.try-again{
+.try-again {
   margin: 20px;
   border: none;
   padding: 15px 30px;
   font-size: x-large;
   color: #d30000;
-  background-color:white;
+  background-color: white;
   padding: 10px;
   border-radius: 25px;
   cursor: pointer;
@@ -470,19 +526,23 @@ div.movie-detailed div.movie-info {
 
 /*Details style*/
 
-.gif-card{
-  width: 30%; /* Adjust this value */
-  margin: 0 auto; /* Centers the card horizontally */
-  margin-top: 20px; /* Adjust this value to move the card higher or lower */
+.gif-card {
+  width: 30%;
+  /* Adjust this value */
+  margin: 0 auto;
+  /* Centers the card horizontally */
+  margin-top: 20px;
+  /* Adjust this value to move the card higher or lower */
   grid-template-columns: 1fr;
   grid-template-rows: 280px 280px 280px;
-  grid-template-areas: 
+  grid-template-areas:
     "image"
     "text";
 
   border-radius: 18px;
-  background: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  background: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  ;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   font-family: roboto;
   text-align: center;
 }
@@ -508,13 +568,13 @@ div.movie-detailed div.movie-info {
 
 .gif-detail p {
   color: #080111;
-  font-size:15px;
+  font-size: 15px;
   font-weight: 300;
 }
 
 .gif-detail h2 {
-  margin-top:20px;
-  font-size:56px;
+  margin-top: 20px;
+  font-size: 56px;
   font-weight: bold;
 
 }
@@ -525,6 +585,7 @@ div.movie-detailed div.movie-info {
   transition: all 0.3s ease;
   overflow: hidden;
 }
+
 .details-button:after {
   position: absolute;
   content: " ";
@@ -533,23 +594,25 @@ div.movie-detailed div.movie-info {
   left: 0;
   width: 100%;
   height: 100%;
-   background-color: #1fd1f9;
-background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
   transition: all 0.3s ease;
 }
+
 .details-button:hover {
   background: transparent;
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+    -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
     inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
   color: #fff;
 }
+
 .details-button:hover:after {
   -webkit-transform: scale(2) rotate(180deg);
   transform: scale(2) rotate(180deg);
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+    -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
     inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
 }
