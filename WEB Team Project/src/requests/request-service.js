@@ -2,9 +2,9 @@ import { API_KEY } from '../common/constants.js';
 import { getSearchGifs, getTrendingURL, getUploadedURL, getGifByID } from '../common/constants.js';
 import { renderFailure, renderSuccess } from '../events/upload-events.js';
 
-export const uploadGif = async (username, url = '', sourceUrl = '', tags, formData = '') => {
+export const uploadGif = async (url = '', sourceUrl = '', tags, formData = '') => {
   try {
-    const response = await fetch(getUploadedURL(username, url, sourceUrl, tags),
+    const response = await fetch(getUploadedURL(url, sourceUrl, tags),
       {
         method: 'POST',
         body: formData,
