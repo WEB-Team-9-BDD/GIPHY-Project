@@ -24,3 +24,7 @@ https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=${limit}&offset=
 export const getSearchGifs = (q='', limit = 20, offset = 0) => `
 https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${q}&limit=${limit}&offset=${offset}&rating=g`;
 
+export const getRandomGifs = () => `
+https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=&rating=g`;
+
+// export const getGifById = (id) => `https://api.giphy.com/v1/gifs/${id}?api_key=${API_KEY}&rating=g`;
