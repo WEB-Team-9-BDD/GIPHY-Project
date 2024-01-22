@@ -19,4 +19,17 @@ export const toUploadView = () => `
 <h2>Uploaded GIFs</h2>
 </div>`;
 
+export const toUploadedView = (uploadedGifs) => {
+  return `
+    <div>
+    ${uploadedGifs.map(toUploadedItemView).join('')}
+    </div>`;
+};
 
+const toUploadedItemView = (gifInfo) => `
+    <div .gif-item>
+    <a href="#/uploaded/${gifInfo.id}">
+    <img class="gif-img-item" src="${gifInfo.images.fixed_width.url} alt="${gifInfo.title}">
+    </a>
+    </div>
+    `;
