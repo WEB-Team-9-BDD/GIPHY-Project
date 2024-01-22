@@ -1,9 +1,9 @@
 import { getSearchGifs, getTrendingURL, getUploadedURL, getGifByID } from '../common/constants.js';
 import { renderFailure, renderSuccess } from '../events/upload-events.js';
 
-export const uploadGif = async (username, url, tags, formData) => {
+export const uploadGif = async (username, url = '', sourceUrl = '', tags, formData = '') => {
   try {
-    const response = await fetch(getUploadedURL(username, url, tags),
+    const response = await fetch(getUploadedURL(username, url, sourceUrl, tags),
       {
         method: 'POST',
         body: formData,
@@ -11,9 +11,14 @@ export const uploadGif = async (username, url, tags, formData) => {
 
     const result = await response.json();
 
-    if (response.status === 200) {
+
+    if (url && response.status === 200) {
       renderSuccess(url);
-    } else if (response.status > 400 && response.status < 499) {
+
+    } else if (sourceUrl && response.status === 200) {
+      renderSuccess(sourceUrl);
+
+    } else if (response.status >= 400 && response.status <= 500) {
       renderFailure(response.status);
     };
   } catch (error) {
