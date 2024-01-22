@@ -75,6 +75,15 @@ const renderUpload = () => {
 export const renderDetails = async (id) => {
   const gifDetails = await loadDetails(id);
 
-  q(CONTAINER_SELECTOR).innerHTML = toGifDetailsView(gifDetails);
+  // Add a close button to the popup
+  const closeButton = '<button id="close-popup">X</button>';
+
+  q('#popup-container').innerHTML = closeButton + toGifDetailsView(gifDetails);
+  q('#popup-container').style.display = 'block'; // Show the popup
+
+  // Add an event listener to the close button
+  q('#close-popup').addEventListener('click', () => {
+    q('#popup-container').style.display = 'none'; // Hide the popup
+  });
 
 }
