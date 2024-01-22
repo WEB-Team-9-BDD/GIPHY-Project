@@ -17,6 +17,9 @@ export const toUploadView = () => `
 </div>
 <div class="uploaded-container">
 <h2>Uploaded GIFs</h2>
+<button class="show-uploaded">Show Uploaded</button>
+<div class="uploaded-ids"></div>
+</div>
 </div>`;
 
 export const toUploadedView = (uploadedGifs) => {
@@ -29,7 +32,7 @@ export const toUploadedView = (uploadedGifs) => {
 const toUploadedItemView = (gifInfo) => `
     <div .gif-item>
     <a href="#/uploaded/${gifInfo.id}">
-    <img class="gif-img-item" src="${gifInfo.images.fixed_width.url} alt="${gifInfo.title}">
+    <img class="uploaded-gif" src="${gifInfo.images.fixed_width.url} alt="${gifInfo.title}">
     </a>
     </div>
     `;
