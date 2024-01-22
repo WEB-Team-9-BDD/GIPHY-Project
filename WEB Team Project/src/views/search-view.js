@@ -1,3 +1,5 @@
+import { renderFavoriteStatus } from '../events/favorites-events.js';
+
 /* eslint-disable valid-jsdoc */
 /* eslint-disable linebreak-style */
 /**
@@ -29,9 +31,12 @@ ${searchGifs.map(toSingleGif).join('')}
 export const toSingleGif = (gifInfo) => `
 <div class="gif-item">
 <a href="#/search/${gifInfo.id}">
-<img class="gif-img-item" src="${gifInfo.images.fixed_width.url} alt="${gifInfo.title}">
+<img class="gif-img-item" src="${gifInfo.images.fixed_width.url}" alt="${gifInfo.title}" 
+data-gif-id="${gifInfo.id}"
+ onclick="location.href='#/search/${gifInfo.id}'
+ " style="cursor: pointer;" />
 </a>
 <br>
-<button class="details-button" data-gif-id="${gifInfo.id}">Details</button>
+${renderFavoriteStatus(gifInfo.id)}
 </div>
 `;

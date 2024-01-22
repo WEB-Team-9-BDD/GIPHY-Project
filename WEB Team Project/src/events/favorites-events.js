@@ -17,10 +17,17 @@ export const toggleFavoriteStatus = (gifId) => {
   }
 };
 
+
 export const renderFavoriteStatus = (gifId) => {
   const favorites = getFavorites();
+  const isFavorite = favorites.includes(gifId);
 
-  return favorites.includes(gifId)
-    ? `<button class="add-favorite-btn active" data-gif-id="${gifId}">${FULL_HEART}</button>`
-    : `<button class="add-favorite-btn" data-gif-id="${gifId}">${EMPTY_HEART}</button>`;
+  return `
+    <div class="heart-wrapper ${isFavorite ? 'active' : ''}">
+      <button class="add-favorite-btn${isFavorite ? ' active' : ''}" data-gif-id="${gifId}">
+        ${isFavorite ? FULL_HEART : EMPTY_HEART}
+      </button>
+    </div>
+  `;
 };
+
