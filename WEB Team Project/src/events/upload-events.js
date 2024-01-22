@@ -1,3 +1,5 @@
+import { loadUploadedGifs } from '../requests/request-service.js';
+import { toUploadedView } from '../views/upload-view.js';
 import { q } from './helpers.js';
 
 export const renderLoadingView = () => {
@@ -30,4 +32,23 @@ export const renderFailure = (status = '') => {
       <button class='try-again'> Please try again!</button>
       </div>
       </div>`;
+};
+
+const uploadedIdsArray = JSON.parse(localStorage.getItem('uploaded')) || [];
+
+export const getUploadedIds = () => [...uploadedIdsArray];
+
+export const addUploadedGif = (gifId) => {
+  if (uploadedIdsArray.find(id => id === gifId)) {
+    // GIF has already been added to Uploaded GIFs
+    return;
+  }
+  uploadedIdsArray.push(gifId);
+  localStorage.setItem('uploaded', JSON.stringify(uploadedIdsArray));
+};
+
+export const renderUploadedGifs = async () => {
+  const uploadedGifs = await loadUploadedGifs();
+
+  q('.uploaded-ids').innerHTML = toUploadedView(uploadedGifs);
 };
