@@ -32,3 +32,6 @@ export const getUploadedURL = (url = '', sourceUrl = '', tags) => `
 https://upload.giphy.com/v1/gifs?api_key=${API_KEY}&file=${url}&source_image_url=${sourceUrl}&tags=${tags}`;
 
 export const getGifByID = (id) => `https://api.giphy.com/v1/gifs/${id}?api_key=${API_KEY}&rating=g`;
+
+export const uploadedIdsEndpoint = (...ids) => `
+https://upload.giphy.com/v1/gifs?api_key=${API_KEY}&ids=${ids}`;

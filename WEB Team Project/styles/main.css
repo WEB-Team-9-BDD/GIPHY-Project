@@ -314,6 +314,10 @@ div.movie-detailed div.movie-info {
 
 /*Gif upload container*/
 .upload-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
   min-width: 50%;
   /* background-color: wheat; */
   background: linear-gradient(315deg, #b621fe 0%, #1fd1f9 98%);
@@ -326,6 +330,10 @@ div.movie-detailed div.movie-info {
 
 /*Uploaded gifs container*/
 .uploaded-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
   min-width: 50%;
   padding: 30px 15px;
   background: linear-gradient(315deg, #1fd1f9 0%, #b621fe 90%);
@@ -539,27 +547,39 @@ div.movie-detailed div.movie-info {
   cursor: pointer;
 }
 
+/*Uploaded GIFs Container*/
+.uploaded-gif {
+  border-radius: 10px;
+  margin: 10px;
+  /* transition: all 0.5; */
+  width: 270px;
+  height: 250px;
+}
+
 /*Details style*/
 
-.gif-card{
-  width: 90%; /* Adjust this value */
+.gif-card {
+  width: 90%;
+  /* Adjust this value */
   height: auto;
-  margin: 0 auto; /* Centers the card horizontally */
-  margin-top: 20px; /* Adjust this value to move the card higher or lower */
+  margin: 0 auto;
+  /* Centers the card horizontally */
+  margin-top: 20px;
+  /* Adjust this value to move the card higher or lower */
   grid-template-columns: 1fr;
   grid-template-rows: 280px 280px 280px;
-  grid-template-areas: 
+  grid-template-areas:
     "image"
     "text";
 
   border-radius: 18px;
   background: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   font-family: roboto;
   text-align: center;
 }
 
-.gif-card > :last-child {
+.gif-card> :last-child {
   margin-bottom: 2px;
 }
 
@@ -584,13 +604,13 @@ div.movie-detailed div.movie-info {
 
 .gif-detail p {
   color: #080111;
-  font-size:15px;
+  font-size: 15px;
   font-weight: 300;
 }
 
 .gif-detail h2 {
-  margin-top:20px;
-  font-size:56px;
+  margin-top: 20px;
+  font-size: 56px;
   font-weight: bold;
 
 }
@@ -604,22 +624,24 @@ div.movie-detailed div.movie-info {
   z-index: 1;
   padding: 5px;
   background: rgb(53, 50, 50);
-  width: 40%; 
-  height: auto; 
+  width: 40%;
+  height: auto;
   max-width: 300px;
   max-height: 600px;
-  border-radius: 15px; /* Simplified border-radius */
+  border-radius: 15px;
+  /* Simplified border-radius */
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   overflow: auto;
   display: none;
-  
+
 }
 
 #popup-container::-webkit-scrollbar {
-  display: none; /* Hide scrollbar */
+  display: none;
+  /* Hide scrollbar */
 }
 
 #close-popup {
@@ -634,11 +656,12 @@ div.movie-detailed div.movie-info {
   margin: 0.5px;
   cursor: pointer;
   transition: 0.25s;
-  border: 2px solid white; /* Add a border */
+  border: 2px solid white;
+  /* Add a border */
   z-index: 1;
   border-radius: 50%;
   float: right;
-  
+
 }
 
 #close-popup::before {
@@ -664,9 +687,17 @@ div.movie-detailed div.movie-info {
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(31, 209, 249, 0.7), 0 0 0 0 rgba(182, 33, 254, 0.7); }
-  50% { box-shadow: 0 0 10px 2px rgba(31, 209, 249, 0.7), 0 0 20px 2px rgba(182, 33, 254, 0.7); }
-  100% { box-shadow: 0 0 0 0 rgba(31, 209, 249, 0.7), 0 0 0 0 rgba(182, 33, 254, 0.7); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(31, 209, 249, 0.7), 0 0 0 0 rgba(182, 33, 254, 0.7);
+  }
+
+  50% {
+    box-shadow: 0 0 10px 2px rgba(31, 209, 249, 0.7), 0 0 20px 2px rgba(182, 33, 254, 0.7);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(31, 209, 249, 0.7), 0 0 0 0 rgba(182, 33, 254, 0.7);
+  }
 }
 
 /*Favorite section*/
@@ -699,15 +730,15 @@ div.movie-detailed div.movie-info {
   border: none;
   cursor: pointer;
   font-size: 30px;
-  padding: 12px 24px; 
-  color: #333; 
+  padding: 12px 24px;
+  color: #333;
 }
 
 .add-favorite-btn.active {
-  color: #ff0000; 
+  color: #ff0000;
 }
 
-.gif-item{
+.gif-item {
   margin-bottom: 5%;
 }
 
@@ -716,8 +747,9 @@ div.movie-detailed div.movie-info {
   font-size: 250%;
   text-align: center;
   align-items: center;
-  justify-content: center; /* Center horizontally */
-  align-items: center; 
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
 }
 
 #no-favorites h2 {
@@ -725,11 +757,12 @@ div.movie-detailed div.movie-info {
   font-size: 100%;
   text-align: center;
   align-items: center;
-  justify-content: center; /* Center horizontally */
-  align-items: center; 
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
 }
 
-.noGIFs{
+.noGIFs {
   display: flex;
   font-size: 100%;
 }

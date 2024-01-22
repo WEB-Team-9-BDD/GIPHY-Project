@@ -3,7 +3,7 @@ import { renderFavoriteStatus, toggleFavoriteStatus } from './events/favorites-e
 import { q } from './events/helpers.js';
 import { loadPage, renderDetails } from './events/navigation-events.js';
 import { renderSearchGifs } from './events/search-events.js';
-import { renderFailure, renderLoadingView } from './events/upload-events.js';
+import { renderFailure, renderLoadingView, renderUploadedGifs } from './events/upload-events.js';
 import { uploadGif } from './requests/request-service.js';
 import { renderFavorites } from './events/navigation-events.js';
 
@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
       renderDetails(event.target.getAttribute('data-gif-id'));
     }
 
+    if (event.target.classList.contains('show-uploaded')) {
+      renderUploadedGifs();
+    }
   });
 
   // search events
