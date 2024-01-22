@@ -1,10 +1,25 @@
 export const toUploadView = () => `
-<div id="upload">
-  <div class="content">
-    <h1>Upload View</h1>
-    
-  </div>
+<div class="parent-upload">
+<div class="upload-container">
+<h2>Upload your own GIF</h2>
+<form id="form">
+        <input class="upload-element" id="file" type="file" accept="image/gif">
+
+        <label class="label" for="username">Username:</label>
+        <input class="upload-element" type="text" id="username" name="username">
+
+        <label class="label" for="tags">Tags:</label>
+        <input class="upload-element" id="tags" type="text" name="tags">
+        
+        <label class="label" for="url">URL Upload:</label>
+        <input class="upload-element" id="url" type="url" name="url"></input>
+        
+        <br>
+        <button id="upload" type="submit">UPLOAD</button>
+    </form>
 </div>
-`;
+<div class="uploaded-container">
+<h2>Uploaded GIFs</h2>
+</div>`;
 
 

@@ -28,3 +28,7 @@ export const getRandomGifs = () => `
 https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=&rating=g`;
 
 // export const getGifById = (id) => `https://api.giphy.com/v1/gifs/${id}?api_key=${API_KEY}&rating=g`;
+export const getUploadedURL = (username, url = '', sourceUrl = '', tags) => `
+https://upload.giphy.com/v1/gifs?api_key=${API_KEY}&username=${username}&file=${url}&source_image_url=${sourceUrl}&tags=${tags}`;
+
+export const getGifByID = (id) => `https://api.giphy.com/v1/gifs/${id}?api_key=${API_KEY}&rating=g`;

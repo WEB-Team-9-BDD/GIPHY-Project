@@ -20,7 +20,7 @@
 export const toSearchView = (text, searchGifs) => {
   return `<div>
 <h2> Gifs with tag name: #${text}</h2>
-<div #gif-container>
+<div class="gif-container">
 ${searchGifs.map(toSingleGif).join('')}
 </div>
 </div>`;
@@ -29,6 +29,9 @@ ${searchGifs.map(toSingleGif).join('')}
 export const toSingleGif = (gifInfo) => `
 <div class="gif-item">
 <a href="#/search/${gifInfo.id}">
-<img class="search-item" src="${gifInfo.images.fixed_width.url} alt="${gifInfo.title}"
+<img class="gif-img-item" src="${gifInfo.images.fixed_width.url} alt="${gifInfo.title}">
+</a>
+<br>
+<button class="details-button" data-gif-id="${gifInfo.id}">Details</button>
 </div>
 `;

@@ -1,13 +1,14 @@
 import { ABOUT, CONTAINER_SELECTOR, FAVORITES, HOME, TRENDING, UPLOAD } from '../common/constants.js';
-import { loadTrendingGifs } from '../requests/request-service.js';
+import { loadTrendingGifs, loadDetails } from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
-import { toFavoritesView } from '../views/favorites-view.js';
+// import { toFavoritesView } from '../views/favorites-view.js';
 import { toHomeView } from '../views/home-view.js';
 import { q, setActiveNav } from './helpers.js';
 import { getFavorites } from '../data/favorites.js';
 import { toTrendingView } from '../views/trending-view.js';
 // import { toSearchView } from '../views/search-view.js';
 import { toUploadView } from '../views/upload-view.js';
+import { toGifDetailsView } from '../views/details-view.js';
 
 // public API
 export const loadPage = (page = '') => {
@@ -25,6 +26,10 @@ export const loadPage = (page = '') => {
   case FAVORITES:
     setActiveNav(FAVORITES);
     return renderFavorites();
+
+  case UPLOAD:
+    setActiveNav(UPLOAD);
+    return renderUpload();
 
   case ABOUT:
     setActiveNav(ABOUT);
@@ -55,6 +60,9 @@ export const renderFavorites = async () => {
   const favorites = getFavorites();
 
   q(CONTAINER_SELECTOR).innerHTML = await toFavoritesView(favorites);
+  // const movies = favorites.map(id => loadSingleMovie(id));
+
+  // q(CONTAINER_SELECTOR).innerHTML = toFavoritesView(movies);
 };
 
 const renderAbout = () => {
@@ -62,5 +70,13 @@ const renderAbout = () => {
 };
 
 const renderUpload = () => {
+
   q(CONTAINER_SELECTOR).innerHTML = toUploadView();
 };
+
+export const renderDetails = async (id) => {
+  const gifDetails = await loadDetails(id);
+
+  q(CONTAINER_SELECTOR).innerHTML = toGifDetailsView(gifDetails);
+
+}
