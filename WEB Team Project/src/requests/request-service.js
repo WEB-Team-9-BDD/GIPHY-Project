@@ -11,7 +11,7 @@ export const uploadGif = async (url = '', sourceUrl = '', tags, formData = '') =
       });
 
     const result = await response.json();
-
+    // return result.data;
 
     if (url && response.status === 200) {
       renderSuccess(url);
@@ -22,6 +22,9 @@ export const uploadGif = async (url = '', sourceUrl = '', tags, formData = '') =
     } else if (response.status >= 400 && response.status <= 500) {
       renderFailure(response.status);
     };
+
+
+
   } catch (error) {
     console.error(error);
     renderFailure();
@@ -66,8 +69,8 @@ export const fetchFavorites = async (gifIds) => {
 
 
 export const loadDetails = async (id) => {
-  
-  const response = await fetch (getGifByID(id));
+
+  const response = await fetch(getGifByID(id));
   const result = await response.json();
 
   if (!response.ok) {
