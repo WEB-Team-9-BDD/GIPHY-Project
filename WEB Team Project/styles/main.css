@@ -705,6 +705,7 @@ span.favorite:hover {
   justify-content: center;
   margin-bottom: 5%;
   list-style: none;
+  margin-right: 40px;
 }
 
 .content img {
@@ -743,6 +744,7 @@ span.favorite:hover {
   justify-content: center;
   list-style: none;
   flex-wrap: wrap;
+  margin-right: 40px;
 }
 
 .gif-grid img {
