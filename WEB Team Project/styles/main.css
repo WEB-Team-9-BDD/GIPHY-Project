@@ -116,19 +116,6 @@ span.favorite:hover {
 /* Homepage styles */
 
 
-#home {
-  padding: 50px;
-}
-
-#home h1 {
-  text-align: center;
-}
-
-#home div.content {
-  max-width: 500px;
-  margin: 50px auto;
-  font-size: 1.5em;
-}
 
 /* End homepage styles */
 
@@ -698,4 +685,18 @@ span.favorite:hover {
 .content img {
   width: 100%; /* Each image will take the full width of the grid column */
   aspect-ratio: 1 / 1; /* This will keep the aspect ratio of images as 1:1 (square) */
+}
+
+/*Remove the ul dot in trending*/
+.gif-grid{
+  list-style: none;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+/*Remove the ul dot in trending*/
+.gif-grid{
+  list-style: none;
+  flex-wrap: wrap;
+  list-style: none;
 }
