@@ -1,5 +1,5 @@
-import { ABOUT, API_KEY, FAVORITES, HOME, TRENDING, UPLOAD } from './common/constants.js';
-import { renderFavoriteStatus, toggleFavoriteStatus } from './events/favorites-events.js';
+import { API_KEY, TRENDING, UPLOAD } from './common/constants.js';
+import { toggleFavoriteStatus } from './events/favorites-events.js';
 import { q } from './events/helpers.js';
 import { loadPage, renderDetails } from './events/navigation-events.js';
 import { renderSearchGifs } from './events/search-events.js';
