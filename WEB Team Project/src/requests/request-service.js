@@ -35,8 +35,8 @@ export const uploadGif = async (url = '', sourceUrl = '', tags, formData = '') =
   }
 };
 
-export const loadSearchGifs = async (searchGif) => {
-  const response = await fetch(getSearchGifs(searchGif));
+export const loadSearchGifs = async (searchTerm) => {
+  const response = await fetch(getSearchGifs(searchTerm));
   const result = await response.json();
 
   return result.data;
