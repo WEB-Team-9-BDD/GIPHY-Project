@@ -693,3 +693,10 @@ span.favorite:hover {
 .gif-item{
   
 }
+
+/*Remove the ul dot in trending*/
+.gif-grid{
+  list-style: none;
+  flex-wrap: wrap;
+  list-style: none;
+}
