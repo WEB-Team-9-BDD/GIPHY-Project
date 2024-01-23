@@ -262,8 +262,10 @@ span.favorite:hover {
   width: auto;
   height: 200px;
 }
+
 .uploaded-gif:hover {
   transform: scale(1.2);
+  border: 3px solid white;
 }
 
 /*Nothing uploaded text*/
@@ -323,7 +325,8 @@ span.favorite:hover {
 
 /*Upload button*/
 
-#upload {
+#upload,
+.new-upload {
   font-size: x-large;
   color: #7700b3cc;
   background-color: white;
@@ -338,7 +341,7 @@ span.favorite:hover {
   background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
 }
 
-#upload:hover {
+#upload:hover{
   color: #ffffff;
   background: transparent;
   box-shadow: none;
@@ -360,7 +363,8 @@ span.favorite:hover {
   transition: 400ms ease all;
 }
 
-#upload:after {
+#upload:after,
+.new-upload::after {
   right: inherit;
   top: inherit;
   left: 0;
@@ -427,6 +431,11 @@ span.favorite:hover {
   border-radius: 25px;
   padding: 5px;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.success-upload h2 {
+  margin: 20px 25px;
 }
 
 #success-image {
