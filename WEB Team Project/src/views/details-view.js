@@ -3,7 +3,7 @@ export const toGifDetailsView = (gifView) => {
     return  `
     <div class="gif-card">
       <div class="card-image">            
-         <img src="${gifView.images.fixed_width.url}" alt="${gifView.title}" class="single">
+      <img src="${gifView.images.fixed_width.url}" alt="${gifView.title}" class="single details-image" style="pointer-events: none;">
       </div>
       <div class="gif-detail">
          <p class='title'>Title: ${gifView.title}</p><br>
