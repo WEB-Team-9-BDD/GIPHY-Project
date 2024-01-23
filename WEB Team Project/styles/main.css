@@ -669,7 +669,6 @@ span.favorite:hover {
   text-align: center;
   align-items: center;
   justify-content: center;
-  /* Center horizontally */
   align-items: center;
 }
 
@@ -679,11 +678,18 @@ span.favorite:hover {
   text-align: center;
   align-items: center;
   justify-content: center;
-  /* Center horizontally */
   align-items: center;
 }
 
-.noGIFs {
+#favorites h1 {
   display: flex;
-  font-size: 100%;
+  font-size: 250%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif-item{
+  
 }
