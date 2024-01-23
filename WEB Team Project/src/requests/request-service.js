@@ -2,6 +2,14 @@ import { API_KEY, uploadedIdsEndpoint } from '../common/constants.js';
 import { getSearchGifs, getTrendingURL, getUploadedURL, getGifByID } from '../common/constants.js';
 import { addUploadedGif, getUploadedIds, renderFailure, renderSuccess, renderUploadedGifs } from '../events/upload-events.js';
 
+/**
+ * This is asyncronous function that makes POST request to Giphy API and uploads a gif
+ * to the user's profile.
+ * @param {string} url A binary string with the GIF uploaded by the file system of the user.
+ * @param {*} sourceUrl An URL for uploading a GIF by url (optional).
+ * @param {*} tags the tags for the GIF
+ * @param {*} formData form data that includes the imported gif and the API key
+ */
 export const uploadGif = async (url = '', sourceUrl = '', tags, formData = '') => {
   try {
     const response = await fetch(getUploadedURL(url, sourceUrl, tags),
@@ -35,6 +43,12 @@ export const uploadGif = async (url = '', sourceUrl = '', tags, formData = '') =
   }
 };
 
+// eslint-disable-next-line valid-jsdoc
+/**
+ * Asyncronous getting information about gifs from Giphy API
+ * @param {string} searchTerm - the gif that the user is looking for
+ * @return Array of objects with the data about each gif
+ */
 export const loadSearchGifs = async (searchTerm) => {
   const response = await fetch(getSearchGifs(searchTerm));
   const result = await response.json();
@@ -69,7 +83,7 @@ export const fetchFavorites = async (gifIds) => {
     console.error('Error fetching GIF by ID:', error);
     return null;
   }
-}
+};
 
 
 export const loadDetails = async (id) => {
@@ -82,8 +96,13 @@ export const loadDetails = async (id) => {
   }
 
   return result.data;
-}
+};
 
+// eslint-disable-next-line valid-jsdoc
+/**
+ * Asyncronous getting the uploaded by the user gifs by ids
+ * @return Array of objects with data about each gif.
+ */
 export const loadUploadedGifs = async () => {
   const idsList = getUploadedIds();
 
