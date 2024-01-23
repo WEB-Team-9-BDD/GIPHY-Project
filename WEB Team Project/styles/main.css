@@ -248,6 +248,7 @@ span.favorite:hover {
 
 /*Uploaded gifs inner container*/
 .uploaded-container-inner {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -257,9 +258,21 @@ span.favorite:hover {
 /*Uploaded GIF*/
 .uploaded-gif {
   border-radius: 20px;
-  margin: 5px;
+  margin: auto 3px;
   width: auto;
   height: 200px;
+}
+.uploaded-gif:hover {
+  transform: scale(1.2);
+}
+
+/*Nothing uploaded text*/
+.uploaded-container-inner h3 {
+  font-size: x-large;
+  border: 2px solid white;
+  letter-spacing: 3px;
+  border-radius: 20px;
+  padding: 20px 30px;
 }
 
 /*Form labels*/
@@ -278,15 +291,16 @@ span.favorite:hover {
   font-size: 25px;
   padding: 15px;
   padding-left: 20px;
-
 }
 
 .upload-container>h2 {
   text-align: center;
+  letter-spacing: 2px;
 }
 
 .uploaded-container-outer h2 {
   text-align: center;
+  letter-spacing: 2px;
 }
 
 /*Upload form*/
