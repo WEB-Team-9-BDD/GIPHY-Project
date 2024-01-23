@@ -15,17 +15,16 @@ export const toUploadView = () => `
         <button id="upload" type="submit">UPLOAD</button>
     </form>
 </div>
-<div class="uploaded-container">
+<div class="uploaded-container-outer">
 <h2>Uploaded GIFs</h2>
-<div class="uploaded-ids"></div>
+<div class="uploaded-container-inner">
 </div>
 </div>`;
 
 export const toUploadedView = (uploadedGifs) => {
   return `
-    <div>
     ${uploadedGifs.map(toUploadedItemView).join('')}
-    </div>`;
+  `;
 };
 
 export const toUploadedItemView = (gifInfo) => `
