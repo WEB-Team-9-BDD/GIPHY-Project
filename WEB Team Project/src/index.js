@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // in case of failure of GIF upload
-    if (event.target.classList.contains('try-again')) {
-
+    if (event.target.classList.contains('try-again') ||
+    event.target.classList.contains('new-upload')) {
       loadPage(UPLOAD);
       renderUploadedGifs();
     }
