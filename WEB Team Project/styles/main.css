@@ -14,8 +14,10 @@ body {
 #logo-container {
   background: url('../images/logos.png') no-repeat center center;
   background-size: cover;
-  height:70px; /* Set to the height you want */
-  width: 214px; /* Set to the width you want */
+  height: 70px;
+  /* Set to the height you want */
+  width: 214px;
+  /* Set to the width you want */
   margin-left: 0;
   margin-right: 10px;
   padding-left: 0;
@@ -130,103 +132,6 @@ span.favorite:hover {
 
 /* End homepage styles */
 
-
-/* Movies styles */
-
-#movies {
-  padding: 50px;
-}
-
-#movies h1 {
-  color: rgb(187, 135, 255);
-}
-
-#movies div.content {
-  font-size: 1.25em;
-  text-align: center;
-}
-
-div.movie {
-  display: inline-block;
-  width: 20%;
-  margin: 1%;
-  padding: 1%;
-  border: 1px solid rgb(97, 71, 97);
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(2px);
-  text-align: center;
-}
-
-div.movie h1 {
-  font-size: 1.5em;
-  margin: 5px;
-}
-
-div.movie h2 {
-  font-size: 1.25em;
-  margin: 5px;
-}
-
-div.movie img {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-#movies button {
-  font-size: 20px;
-  padding: 5px;
-  color: rgb(222, 113, 255);
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid black;
-  cursor: pointer;
-}
-
-#movies button:hover {
-  color: white;
-}
-
-/* Single movie styles */
-
-div.movie-detailed {
-  padding: 20px;
-  border: 1px solid rgb(97, 71, 97);
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(2px);
-  display: table;
-  width: 100%;
-}
-
-div.movie-detailed p {
-  font-size: 1.25em;
-  color: #eee;
-}
-
-div.movie-detailed div.poster {
-  width: 30%;
-  display: table-cell;
-  padding: 20px;
-  margin: 10px;
-  border-right: 1px solid rgb(112, 112, 112);
-}
-
-div.movie-detailed div.poster img {
-  width: 100%;
-}
-
-div.movie-detailed div.movie-info {
-  padding: 20px;
-  margin: 10px;
-  vertical-align: top;
-  display: table-cell;
-  text-align: left;
-  width: 70%;
-  /* height: 100%; */
-}
-
-/* End movies styles */
-
-
 /* About styles */
 
 #about {
@@ -259,7 +164,7 @@ div.movie-detailed div.movie-info {
   align-items: center;
   border-radius: 40px;
   padding: 10px 10px;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 .search-bar input {
@@ -319,7 +224,6 @@ div.movie-detailed div.movie-info {
   justify-content: center;
   margin-top: 20px;
   min-width: 50%;
-  /* background-color: wheat; */
   background: linear-gradient(315deg, #b621fe 0%, #1fd1f9 98%);
   padding: 30px 15px;
   color: white(0, 0, 0);
@@ -328,11 +232,11 @@ div.movie-detailed div.movie-info {
   overflow: auto;
 }
 
-/*Uploaded gifs container*/
-.uploaded-container {
+/*Uploaded gifs outer container*/
+.uploaded-container-outer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   margin-top: 20px;
   min-width: 50%;
   padding: 30px 15px;
@@ -340,6 +244,22 @@ div.movie-detailed div.movie-info {
   color: white;
   border-radius: 25px;
   overflow: auto;
+}
+
+/*Uploaded gifs inner container*/
+.uploaded-container-inner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*Uploaded GIF*/
+.uploaded-gif {
+  border-radius: 20px;
+  margin: 5px;
+  width: auto;
+  height: 200px;
 }
 
 /*Form labels*/
@@ -365,7 +285,7 @@ div.movie-detailed div.movie-info {
   text-align: center;
 }
 
-.uploaded-container h2 {
+.uploaded-container-outer h2 {
   text-align: center;
 }
 
@@ -438,19 +358,6 @@ div.movie-detailed div.movie-info {
   width: 100%;
   transition: 800ms ease all;
 }
-
-/* #upload {
-  margin-top: 20px;
-  margin-left: 10px;
-  font-size: x-large;
-  color: #7700b3cc;
-  background-color: white;
-  padding: 10px;
-  border-radius: 25px;
-  border: 3px solid #7700b3cc;
-  border: none;
-  cursor: pointer;
-} */
 
 /*Loading page container*/
 .load-container {
@@ -545,15 +452,6 @@ div.movie-detailed div.movie-info {
   padding: 10px;
   border-radius: 25px;
   cursor: pointer;
-}
-
-/*Uploaded GIFs Container*/
-.uploaded-gif {
-  border-radius: 10px;
-  margin: 10px;
-  /* transition: all 0.5; */
-  width: 270px;
-  height: 250px;
 }
 
 /*Details style*/
