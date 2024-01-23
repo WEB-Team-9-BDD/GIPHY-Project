@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // in case of failure of GIF upload
     if (event.target.classList.contains('try-again') ||
-    event.target.classList.contains('new-upload')) {
+      event.target.classList.contains('new-upload')) {
       loadPage(UPLOAD);
-      renderUploadedGifs();
+      (async () => await renderUploadedGifs())();
     }
 
     // toggle favorite event
