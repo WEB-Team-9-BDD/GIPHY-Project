@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
       renderDetails(event.target.getAttribute('data-gif-id'));
     }
 
-    if (event.target.classList.contains('show-uploaded')) {
+    if (event.target.classList.contains('upload-page')) {
       renderUploadedGifs();
     }
   });
