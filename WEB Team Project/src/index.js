@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // nav events
     if (event.target.classList.contains('nav-link')) {
 
+      document.querySelector('#popup-container').style.display = 'none';
+
       loadPage(event.target.getAttribute('data-page'));
     }
 
@@ -50,6 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (event.target.classList.contains('project-logo')) {
+
+      document.querySelector('#popup-container').style.display = 'none';
+      
       loadPage(TRENDING);
     }
   });
