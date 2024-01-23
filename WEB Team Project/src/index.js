@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // toggle details event
-    if (event.target.tagName === 'IMG') {
+    if (event.target.tagName === 'IMG' && !event.target.classList.contains('details-image')) {
       renderDetails(event.target.getAttribute('data-gif-id'));
     }
 
