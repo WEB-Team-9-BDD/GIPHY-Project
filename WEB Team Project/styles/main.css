@@ -21,6 +21,7 @@ body {
   margin-left: 0;
   margin-right: 10px;
   padding-left: 0;
+  cursor: pointer;
 }
 
 div#app {
