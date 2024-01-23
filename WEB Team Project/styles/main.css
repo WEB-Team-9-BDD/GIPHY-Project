@@ -748,7 +748,6 @@ div.movie-detailed div.movie-info {
   text-align: center;
   align-items: center;
   justify-content: center;
-  /* Center horizontally */
   align-items: center;
 }
 
@@ -758,11 +757,18 @@ div.movie-detailed div.movie-info {
   text-align: center;
   align-items: center;
   justify-content: center;
-  /* Center horizontally */
   align-items: center;
 }
 
-.noGIFs {
+#favorites h1 {
   display: flex;
-  font-size: 100%;
+  font-size: 250%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif-item{
+  
 }
