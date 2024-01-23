@@ -20,9 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // in case of failure of GIF upload
-    if (event.target.classList.contains('try-again')) {
-
+    if (event.target.classList.contains('try-again') ||
+    event.target.classList.contains('new-upload')) {
       loadPage(UPLOAD);
+      renderUploadedGifs();
     }
 
     // toggle favorite event
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       renderDetails(event.target.getAttribute('data-gif-id'));
     }
 
-    if (event.target.classList.contains('show-uploaded')) {
+    if (event.target.classList.contains('upload-page')) {
       renderUploadedGifs();
     }
   });

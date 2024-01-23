@@ -1,6 +1,6 @@
 import { API_KEY, uploadedIdsEndpoint } from '../common/constants.js';
 import { getSearchGifs, getTrendingURL, getUploadedURL, getGifByID } from '../common/constants.js';
-import { addUploadedGif, getUploadedIds, renderFailure, renderSuccess } from '../events/upload-events.js';
+import { addUploadedGif, getUploadedIds, renderFailure, renderSuccess, renderUploadedGifs } from '../events/upload-events.js';
 
 export const uploadGif = async (url = '', sourceUrl = '', tags, formData = '') => {
   try {
@@ -18,10 +18,12 @@ export const uploadGif = async (url = '', sourceUrl = '', tags, formData = '') =
 
       renderSuccess(url);
       addUploadedGif(id);
+      await renderUploadedGifs();
 
     } else if (sourceUrl && response.status === 200) {
       renderSuccess(sourceUrl);
       addUploadedGif(id);
+      await renderUploadedGifs();
 
     } else if (response.status >= 400 && response.status <= 500) {
       renderFailure(response.status);

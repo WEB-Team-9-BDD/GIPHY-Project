@@ -1,7 +1,8 @@
 import { loadUploadedGifs } from '../requests/request-service.js';
-import { toUploadedView } from '../views/upload-view.js';
+import { toEmptyUploadedView, toUploadedView } from '../views/upload-view.js';
 import { q } from './helpers.js';
 
+// Events on upload view
 export const renderLoadingView = () => {
   q('.upload-container').innerHTML = `
     <div class="load-container">
@@ -20,6 +21,7 @@ export const renderSuccess = (url) => {
       <div id="success-image">
       <img class="gif-img-item" src="${url}">
       </div>
+      <button class="new-upload">New Upload</button>
       </div>`;
 };
 
@@ -34,6 +36,7 @@ export const renderFailure = (status = '') => {
       </div>`;
 };
 
+// Events on uploaded view
 const uploadedIdsArray = JSON.parse(localStorage.getItem('uploaded')) || [];
 
 export const getUploadedIds = () => [...uploadedIdsArray];
@@ -49,6 +52,9 @@ export const addUploadedGif = (gifId) => {
 
 export const renderUploadedGifs = async () => {
   const uploadedGifs = await loadUploadedGifs();
-
-  q('.uploaded-ids').innerHTML = toUploadedView(uploadedGifs);
+  if (uploadedIdsArray.length > 0) {
+    q('.uploaded-container-inner').innerHTML = toUploadedView(uploadedGifs);
+  } else {
+    q('.uploaded-container-inner').innerHTML = toEmptyUploadedView();
+  }
 };
