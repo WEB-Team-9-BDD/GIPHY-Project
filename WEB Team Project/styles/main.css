@@ -699,20 +699,46 @@ span.favorite:hover {
 }
 
 .content img {
-  width: 100%; /* Each image will take the full width of the grid column */
-  aspect-ratio: 1 / 1; /* This will keep the aspect ratio of images as 1:1 (square) */
+  width: 100%;
+  aspect-ratio: 1 / 1;
 }
 
-/*Remove the ul dot in trending*/
-.gif-grid{
+.random-gif {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px; 
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
   list-style: none;
   flex-wrap: wrap;
   list-style: none;
 }
 
-.gif-item img {
-width: 100%;
-aspect-ratio: 1 / 1;
+.random-gif img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+/*Trending view*/
+/*Trending GIFs view*/
+.gif-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 per row */
+  grid-gap: 10px; /* gap between all gifs */
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.gif-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
 
 /*Remove the ul dot in trending*/
