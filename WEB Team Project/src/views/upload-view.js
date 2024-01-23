@@ -9,7 +9,7 @@ export const toUploadView = () => `
         <input class="upload-element" id="tags" type="text" name="tags">
         
         <label class="label" for="url">URL Upload (Optional):</label>
-        <input class="upload-element" id="url" type="url" name="url"></input>
+        <input class="upload-element" id="url" type="url" name="url">
         
         <br>
         <button id="upload" type="submit">UPLOAD</button>
@@ -17,8 +17,7 @@ export const toUploadView = () => `
 </div>
 <div class="uploaded-container-outer">
 <h2>Uploaded GIFs</h2>
-<div class="uploaded-container-inner">
-</div>
+<div class="uploaded-container-inner"></div>
 </div>`;
 
 export const toUploadedView = (uploadedGifs) => {
@@ -35,6 +34,7 @@ export const toUploadedItemView = (gifInfo) => `
     </div>
     `;
 
-export const toEmptyUploadedView = () => `<div>
+export const toEmptyUploadedView = () => `
+<div>
 <h3>No Uploads yet!</h3>
-<div>`;
+</div>`;
