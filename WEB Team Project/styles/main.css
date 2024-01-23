@@ -221,6 +221,10 @@ span.favorite:hover {
   overflow: auto;
 }
 
+.upload-container::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar */
+}
 .uploaded-container-outer::-webkit-scrollbar {
   display: none;
   /* Hide scrollbar */
@@ -430,16 +434,26 @@ span.favorite:hover {
   padding: 10px;
   margin: 5px;
   box-shadow: 10px 10px 5px #5ac92270;
+  max-width: 300px;
 }
 
 /*When GIF upload fail*/
 .fail-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 50%;
+  padding: 30px 15px;
+  border-radius: 25px;
+  background-color: #efc404;
+  background-image: linear-gradient(to bottom right, #ff5e3a, #d30000);
+  color: white;
   border-radius: 25px;
 }
 
 .fail-message {
-  background-color: #e7665f;
-  background-image: linear-gradient(to bottom right, #f2764c, #d30000);
   color: white;
   border-radius: 25px;
   padding: 35px 80px;
