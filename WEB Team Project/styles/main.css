@@ -40,19 +40,17 @@ div#app {
 
 header {
   grid-area: header;
-  height: 5px;
+  height: 0;
   background-color: black;
-  /* background: url('../images/banner-top.png'); */
 }
 
 nav {
   grid-area: menu;
   height: 60px;
   background-color: black;
-  /* background: url('../images//banner-bottom.png'); */
   font-size: 1.75em;
   line-height: 60px;
-  padding: 20px;
+  padding: 25px;
   color: white;
   display: flex;
   margin-left: 0;
@@ -199,8 +197,8 @@ span.favorite:hover {
   display: grid;
   grid-template-columns: 50% 50%;
   border-radius: 25px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 25px;
   padding: 10px;
 }
 
@@ -223,24 +221,40 @@ span.favorite:hover {
 .uploaded-container-outer {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   margin-top: 20px;
   min-width: 50%;
   padding: 30px 15px;
   background: linear-gradient(315deg, #1fd1f9 0%, #b621fe 90%);
   color: white;
   border-radius: 25px;
+  height: 500px;
+  text-align: center;
+  letter-spacing: 2px;
   overflow: auto;
 }
 
+.uploaded-container-outer::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar */
+}
+
+
 /*Uploaded gifs inner container*/
 .uploaded-container-inner {
-  margin-top: 20px;
+  margin-top: 10px;
+  padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  overflow: auto;
 }
+
+.uploaded-container-inner::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar */
+}
+
 
 /*Uploaded GIF*/
 .uploaded-gif {
@@ -251,7 +265,7 @@ span.favorite:hover {
 }
 
 .uploaded-gif:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   border: 3px solid white;
 }
 
@@ -269,7 +283,6 @@ span.favorite:hover {
   margin-left: 10px;
   font-size: 25px;
   padding: 3px;
-  /* font-weight: bold; */
 }
 
 /*Form input fields*/
@@ -282,15 +295,11 @@ span.favorite:hover {
   padding-left: 20px;
 }
 
-.upload-container>h2 {
+.upload-container h2 {
   text-align: center;
   letter-spacing: 2px;
 }
 
-.uploaded-container-outer h2 {
-  text-align: center;
-  letter-spacing: 2px;
-}
 
 /*Upload form*/
 #form {
@@ -328,7 +337,7 @@ span.favorite:hover {
   background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
 }
 
-#upload:hover{
+#upload:hover {
   color: #ffffff;
   background: transparent;
   box-shadow: none;
@@ -447,7 +456,7 @@ span.favorite:hover {
   background-image: linear-gradient(to bottom right, #f2764c, #d30000);
   color: white;
   border-radius: 25px;
-  padding: 5px;
+  padding: 35px 80px;
   text-align: center;
 }
 
@@ -675,59 +684,27 @@ span.favorite:hover {
 }
 
 /*Favorite GIFs view*/
-.content { 
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); 
-    grid-gap: 10px; 
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 5%;
+.content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  
+  grid-gap: 10px;
+  
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
     list-style: none;
     flex-wrap: wrap;
     list-style: none;
 }
 
 .content img {
-  width: 100%; 
-  aspect-ratio: 1 / 1; 
+  width: 100%; /* Each image will take the full width of the grid column */
+  aspect-ratio: 1 / 1; /* This will keep the aspect ratio of images as 1:1 (square) */
 }
 
-.random-gif {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 10px; 
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 5%;
-  list-style: none;
-  flex-wrap: wrap;
-  list-style: none;
-}
-
-.random-gif img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-}
-
-/*Trednign section*/
-/*Adjust trending GIFs view*/
-.trending h2 {
-  display: grid;
-  font-size: 250%;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.gif-grid { 
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 10px; 
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 5%;
+/*Remove the ul dot in trending*/
+.gif-grid{
   list-style: none;
   flex-wrap: wrap;
   list-style: none;
@@ -739,7 +716,7 @@ aspect-ratio: 1 / 1;
 }
 
 /*Remove the ul dot in trending*/
-.gif-grid{
+.gif-grid {
   list-style: none;
   flex-wrap: wrap;
   list-style: none;

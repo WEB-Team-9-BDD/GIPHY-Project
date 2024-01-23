@@ -1,12 +1,9 @@
 import { ABOUT, CONTAINER_SELECTOR, FAVORITES, TRENDING, UPLOAD } from '../common/constants.js';
 import { loadTrendingGifs, loadDetails } from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
-// import { toFavoritesView } from '../views/favorites-view.js';
-
 import { q, setActiveNav } from './helpers.js';
 import { getFavorites } from '../data/favorites.js';
 import { toTrendingView } from '../views/trending-view.js';
-// import { toSearchView } from '../views/search-view.js';
 import { toUploadView } from '../views/upload-view.js';
 import { toGifDetailsView } from '../views/details-view.js';
 import { toFavoritesView } from '../views/favorites-view.js';
@@ -65,15 +62,22 @@ const renderUpload = () => {
 export const renderDetails = async (id) => {
   const gifDetails = await loadDetails(id);
 
-  // Add a close button to the popup
+  
   const closeButton = '<button id="close-popup">X</button>';
 
   q('#popup-container').innerHTML = closeButton + toGifDetailsView(gifDetails);
-  q('#popup-container').style.display = 'block'; // Show the popup
+  q('#popup-container').style.display = 'block'; 
 
-  // Add an event listener to the close button
+  
   q('#close-popup').addEventListener('click', () => {
-    q('#popup-container').style.display = 'none'; // Hide the popup
+    q('#popup-container').style.display = 'none'; 
+  });
+
+  document.addEventListener('keydown', function onKeydown(event) {
+    if (event.key === 'Escape') {
+      q('#popup-container').style.display = 'none'; 
+      document.removeEventListener('keydown', onKeydown);
+    }
   });
 
 };
