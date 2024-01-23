@@ -8,7 +8,7 @@ export const toUploadView = () => `
         <label class="label" for="tags">Tags:</label>
         <input class="upload-element" id="tags" type="text" name="tags">
         
-        <label class="label" for="url">URL Upload:</label>
+        <label class="label" for="url">URL Upload (Optional):</label>
         <input class="upload-element" id="url" type="url" name="url"></input>
         
         <br>
