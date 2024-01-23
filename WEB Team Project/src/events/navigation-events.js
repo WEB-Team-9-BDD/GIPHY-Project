@@ -50,10 +50,16 @@ export const renderFavorites = async () => {
   q(CONTAINER_SELECTOR).innerHTML = await toFavoritesView(favorites);
 };
 
+/**
+ * About page rendering function
+ */
 const renderAbout = () => {
   q(CONTAINER_SELECTOR).innerHTML = toAboutView();
 };
 
+/**
+ * Upload page rendering function
+ */
 const renderUpload = () => {
 
   q(CONTAINER_SELECTOR).innerHTML = toUploadView();
@@ -71,20 +77,20 @@ const renderUpload = () => {
 export const renderDetails = async (id) => {
   const gifDetails = await loadDetails(id);
 
-  
+
   const closeButton = '<button id="close-popup">X</button>';
 
   q('#popup-container').innerHTML = closeButton + toGifDetailsView(gifDetails);
-  q('#popup-container').style.display = 'block'; 
+  q('#popup-container').style.display = 'block';
 
-  
+
   q('#close-popup').addEventListener('click', () => {
-    q('#popup-container').style.display = 'none'; 
+    q('#popup-container').style.display = 'none';
   });
 
   document.addEventListener('keydown', function onKeydown(event) {
     if (event.key === 'Escape') {
-      q('#popup-container').style.display = 'none'; 
+      q('#popup-container').style.display = 'none';
       document.removeEventListener('keydown', onKeydown);
     }
   });
