@@ -3,6 +3,7 @@
 html,
 body {
   margin: 0;
+  font-family: 'Poppins';
 }
 
 body {
@@ -18,8 +19,8 @@ body {
   /* Set to the height you want */
   width: 214px;
   /* Set to the width you want */
-  margin-left: 0;
-  margin-right: 10px;
+  margin-left: 12px;
+  margin-right: 12px;
   padding-left: 0;
   cursor: pointer;
 }
@@ -795,4 +796,13 @@ span.favorite:hover {
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+.upload-page {
+  margin-left: -10px;
+  border-radius: 10px;
+  justify-content: center;
+  border: 3px solid ;
+  margin: -7px;
+  padding: 5px;
 }
