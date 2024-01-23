@@ -1,3 +1,8 @@
+/* eslint-disable valid-jsdoc */
+/**
+ *
+ * @return The HTML for the upload page.
+ */
 export const toUploadView = () => `
 <div class="parent-upload">
 <div class="upload-container">
@@ -20,12 +25,22 @@ export const toUploadView = () => `
 <div class="uploaded-container-inner"></div>
 </div>`;
 
+/**
+ * Gives a HTML structure of the uploaded gifs container
+ * @param {Array} uploadedGifs - Array with uploaded gifs data.
+ * @returns A mapping function for every uploaded gif.
+ */
 export const toUploadedView = (uploadedGifs) => {
   return `
     ${uploadedGifs.map(toUploadedItemView).join('')}
   `;
 };
 
+/**
+ * Gives a HTML structure of the uploaded gif
+ * @param {Object} gifInfo - An object with information for the gif
+ * @returns The HTML for a single gif.
+ */
 export const toUploadedItemView = (gifInfo) => `
     <div .gif-item>
     <a href="#/uploaded/${gifInfo.id}">
@@ -34,6 +49,10 @@ export const toUploadedItemView = (gifInfo) => `
     </div>
     `;
 
+/**
+ * @returns In case of zero uploaded gifs - the function returns HTML structure
+ * for no uploads message.
+ */
 export const toEmptyUploadedView = () => `
 <div>
 <h3>No Uploads yet!</h3>
