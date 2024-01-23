@@ -116,23 +116,6 @@ span.favorite:hover {
 
 
 /* End homepage styles */
-
-/* About styles */
-
-#about {
-  padding: 50px;
-}
-
-
-#about h1 {
-  color: rgb(187, 135, 255);
-  margin-bottom: 50px;
-}
-
-#about h2 {
-  color: rgb(229, 210, 255);
-}
-
 /* NEW STYLES */
 
 .nav-links {
@@ -751,4 +734,35 @@ span.favorite:hover {
   list-style: none;
   flex-wrap: wrap;
   list-style: none;
+}
+
+/*About app view*/
+#about h1 {
+  display: flex;
+  font-size: 250%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#about h2 {
+  display: flex;
+  font-size: 150%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#about h3 {
+  display: flex;
+  font-size: 250%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
