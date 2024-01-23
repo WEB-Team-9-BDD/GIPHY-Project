@@ -373,8 +373,8 @@ span.favorite:hover {
   min-width: 50%;
   padding: 30px 15px;
   border-radius: 25px;
-  background-color: #efc404;
-  background-image: linear-gradient(to bottom right, #faef55, #efc404);
+  background-color: #efc4042d;
+  background-image: linear-gradient(to bottom right, #faef5592, #efc4047f);
   color: white;
 }
 
@@ -447,7 +447,7 @@ span.favorite:hover {
   min-width: 50%;
   padding: 30px 15px;
   border-radius: 25px;
-  background-color: #efc404;
+  background-color: #ff5e3ab8;
   background-image: linear-gradient(to bottom right, #ff5e3a, #d30000);
   color: white;
   border-radius: 25px;
