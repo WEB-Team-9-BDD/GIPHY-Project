@@ -52,8 +52,8 @@ export const addUploadedGif = (gifId) => {
 export const renderUploadedGifs = async () => {
   const uploadedGifs = await loadUploadedGifs();
   if (uploadedIdsArray.length > 0) {
-    q('.uploaded-ids').innerHTML = toUploadedView(uploadedGifs);
+    q('.uploaded-container-inner').innerHTML = toUploadedView(uploadedGifs);
   } else {
-    q('.uploaded-ids').innerHTML = toEmptyUploadedView();
+    q('.uploaded-container-inner').innerHTML = toEmptyUploadedView();
   }
 };
