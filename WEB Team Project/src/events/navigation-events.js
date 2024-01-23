@@ -1,12 +1,9 @@
 import { ABOUT, CONTAINER_SELECTOR, FAVORITES, TRENDING, UPLOAD } from '../common/constants.js';
 import { loadTrendingGifs, loadDetails } from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
-// import { toFavoritesView } from '../views/favorites-view.js';
-
 import { q, setActiveNav } from './helpers.js';
 import { getFavorites } from '../data/favorites.js';
 import { toTrendingView } from '../views/trending-view.js';
-// import { toSearchView } from '../views/search-view.js';
 import { toUploadView } from '../views/upload-view.js';
 import { toGifDetailsView } from '../views/details-view.js';
 import { toFavoritesView } from '../views/favorites-view.js';
