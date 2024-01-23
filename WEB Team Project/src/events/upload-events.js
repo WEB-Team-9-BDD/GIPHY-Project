@@ -30,7 +30,7 @@ export const renderFailure = (status = '') => {
       <div class = "fail-container">
       <div class = "fail-message">
       <h2>The GIF upload has failed!</h2>
-      <h3>That's an error: ${status} </h3>
+      <h3>That's an error ${status} </h3>
       <button class='try-again'> Please try again!</button>
       </div>
       </div>`;
