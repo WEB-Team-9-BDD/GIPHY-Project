@@ -1,6 +1,4 @@
 export const toGifDetailsView = (gifView) => {
-    console.log(gifView);
-    console.log(gifView.images);
  
     return  `
     <div class="gif-card">

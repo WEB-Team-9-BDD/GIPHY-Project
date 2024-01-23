@@ -646,10 +646,6 @@ span.favorite:hover {
   color: #ff0000;
 }
 
-.gif-item {
-  margin-bottom: 5%;
-}
-
 #no-favorites h1 {
   display: flex;
   font-size: 250%;
@@ -677,8 +673,25 @@ span.favorite:hover {
   align-items: center;
 }
 
-.gif-item{
-  
+.content { 
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 per row */
+    grid-gap: 10px; /* gap between all gifs */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.content img {
+  width: 100%; /* Each image will take the full width of the grid column */
+  aspect-ratio: 1 / 1; /* This will keep the aspect ratio of images as 1:1 (square) */
+}
+
+/*Remove the ul dot in trending*/
+.gif-grid{
+  list-style: none;
+  flex-wrap: wrap;
+  list-style: none;
 }
 
 /*Remove the ul dot in trending*/
