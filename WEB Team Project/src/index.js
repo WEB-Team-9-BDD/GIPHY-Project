@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (event.target.classList.contains('try-again')) {
 
       loadPage(UPLOAD);
+      renderUploadedGifs();
     }
 
     // toggle favorite event
