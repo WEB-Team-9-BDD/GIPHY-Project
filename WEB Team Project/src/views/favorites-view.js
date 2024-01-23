@@ -27,10 +27,16 @@ export const toFavoritesView = async (favGifsId) => {
     <ul class="content">
       ${favGifs.map(gif => gif ? `
         <li class="gif-item">
-        <img src="${gif.images.fixed_height.url}" alt="${gif.title}" data-gif-id="${gif.id}"        
+          <div class="img-wrapper">
+            <a href='#/favorites/${gif.id}'>
+              <img src="${gif.images.fixed_height.url}" alt="${gif.title}" data-gif-id="${gif.id}" 
+               onclick="location.href='#/favorites/${gif.id}'" style="cursor: pointer;" />
+            </a>
+            <div class="add-favorite-btn">${renderFavoriteStatus(gif.id)}</div>
+          </div>
         </li>
         ` : '<p>GIF cannot load</p>').join('')}
     </ul>
-  </div>`;;
+  </div>`;
 };
 
