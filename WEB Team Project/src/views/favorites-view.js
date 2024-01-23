@@ -10,7 +10,7 @@ export const toFavoritesView = async (favGifsId) => {
     return `<div id="no-favorites">
     <h1>Favorite GIFs:</h1>
     <h2>Add some GIFs to favorites to see them here.</h2>
-    <li class="randomGif">
+    <li class="random-gif">
     <img src="${result.images.fixed_width.url}" alt="${result.title}" data-gif-id="${result.id}" 
     onclick="location.href='#/random/${result.id}'" style="cursor: pointer;" width="150" height="150">
     </li>

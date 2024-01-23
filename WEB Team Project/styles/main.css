@@ -644,7 +644,6 @@ span.favorite:hover {
   text-align: center;
   align-items: center;
   justify-content: center;
-  align-items: center;
 }
 
 #no-favorites h2 {
@@ -653,7 +652,6 @@ span.favorite:hover {
   text-align: center;
   align-items: center;
   justify-content: center;
-  align-items: center;
 }
 
 #favorites h1 {
@@ -662,25 +660,20 @@ span.favorite:hover {
   text-align: center;
   align-items: center;
   justify-content: center;
-  align-items: center;
 }
 
 .content {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /* 5 per row */
   grid-gap: 10px;
-  /* gap between all gifs */
   align-items: center;
   justify-content: center;
   margin-bottom: 5%;
+  list-style: none;
 }
 
 .content img {
   width: 100%;
-  /* Each image will take the full width of the grid column */
-  aspect-ratio: 1 / 1;
-  /* This will keep the aspect ratio of images as 1:1 (square) */
   aspect-ratio: 1 / 1;
 }
 
@@ -691,7 +684,6 @@ span.favorite:hover {
   align-items: center;
   justify-content: center;
   margin-bottom: 5%;
-  list-style: none;
   flex-wrap: wrap;
   list-style: none;
 }
@@ -712,7 +704,6 @@ span.favorite:hover {
   justify-content: center;
   list-style: none;
   flex-wrap: wrap;
-  list-style: none;
 }
 
 .gif-grid img {
