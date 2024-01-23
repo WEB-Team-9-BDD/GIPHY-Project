@@ -21,6 +21,7 @@ export const renderSuccess = (url) => {
       <div id="success-image">
       <img class="gif-img-item" src="${url}">
       </div>
+      <button class="new-upload">New Upload</button>
       </div>`;
 };
 
