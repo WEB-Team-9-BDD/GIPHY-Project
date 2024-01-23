@@ -1,6 +1,11 @@
+/**
+ * Converts a gif object into a string of HTML representing the gif's details.
+ *
+ * @param {Object} gifView - The gif object to convert. This object should have properties for the gif's image URL, title, rating, and user information.
+ * @returns {string} A string of HTML representing the gif's details.
+ */
 export const toGifDetailsView = (gifView) => {
- 
-    return  `
+     return  `
     <div class="gif-card">
       <div class="card-image">            
       <img src="${gifView.images.fixed_width.url}" alt="${gifView.title}" class="single details-image" style="pointer-events: none;">

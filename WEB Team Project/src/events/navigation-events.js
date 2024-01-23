@@ -59,6 +59,15 @@ const renderUpload = () => {
   q(CONTAINER_SELECTOR).innerHTML = toUploadView();
 };
 
+/**
+ * Asynchronously fetches and renders the details of a specific gif.
+ *
+ * @param {string} id - The ID of the gif to fetch and render.
+ * This function fetches the gif details using the `loadDetails` function,
+ * then constructs the HTML for the details view and inserts it into the
+ * '#popup-container' element. It also sets up event listeners to close
+ * the details view when the close button is clicked or the 'Escape' key is pressed.
+ */
 export const renderDetails = async (id) => {
   const gifDetails = await loadDetails(id);
 

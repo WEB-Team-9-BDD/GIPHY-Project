@@ -7,7 +7,11 @@ import { renderFailure, renderLoadingView, renderUploadedGifs } from './events/u
 import { uploadGif } from './requests/request-service.js';
 import { renderFavorites } from './events/navigation-events.js';
 
-
+/**
+ * Initializes the application when the DOM is fully loaded.
+ * This function sets up global click and keypress event listeners to handle
+ * navigation, gif favoriting, gif details viewing, and gif searching.
+ */
 document.addEventListener('DOMContentLoaded', () => {
 
   // add global listener
