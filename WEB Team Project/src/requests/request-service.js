@@ -85,7 +85,13 @@ export const fetchFavorites = async (gifIds) => {
   }
 };
 
-
+/**
+ * Fetches and returns the details of a gif by its ID.
+ *
+ * @param {string} id - The ID of the gif.
+ * @returns {Promise<Object>} A promise that resolves to the gif details.
+ * @throws {Error} If the fetch operation fails.
+ */
 export const loadDetails = async (id) => {
 
   const response = await fetch(getGifByID(id));
