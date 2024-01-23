@@ -19,7 +19,7 @@ export const toFavoritesView = async (favGifsId) => {
   }
 
   const favGifsIds = getFavorites().join(', ');
-  console.log(favGifsIds);
+  // console.log(favGifsIds);
   const favGifs = await fetchFavorites(favGifsIds);
 
   return `
