@@ -116,23 +116,6 @@ span.favorite:hover {
 
 
 /* End homepage styles */
-
-/* About styles */
-
-#about {
-  padding: 50px;
-}
-
-
-#about h1 {
-  color: rgb(187, 135, 255);
-  margin-bottom: 50px;
-}
-
-#about h2 {
-  color: rgb(229, 210, 255);
-}
-
 /* NEW STYLES */
 
 .nav-links {
@@ -659,7 +642,6 @@ span.favorite:hover {
   text-align: center;
   align-items: center;
   justify-content: center;
-  align-items: center;
 }
 
 #no-favorites h2 {
@@ -668,7 +650,6 @@ span.favorite:hover {
   text-align: center;
   align-items: center;
   justify-content: center;
-  align-items: center;
 }
 
 #favorites h1 {
@@ -677,25 +658,57 @@ span.favorite:hover {
   text-align: center;
   align-items: center;
   justify-content: center;
-  align-items: center;
 }
 
 .content {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /* 5 per row */
   grid-gap: 10px;
-  /* gap between all gifs */
   align-items: center;
   justify-content: center;
   margin-bottom: 5%;
+  list-style: none;
 }
 
 .content img {
   width: 100%;
-  /* Each image will take the full width of the grid column */
   aspect-ratio: 1 / 1;
-  /* This will keep the aspect ratio of images as 1:1 (square) */
+}
+
+.random-gif {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px; 
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.random-gif img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+/*Trending view*/
+/*Trending GIFs view*/
+.gif-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 per row */
+  grid-gap: 10px; /* gap between all gifs */
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.gif-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
 
 /*Remove the ul dot in trending*/
@@ -712,3 +725,33 @@ span.favorite:hover {
   list-style: none;
 }
 
+/*About app view*/
+#about h1 {
+  display: flex;
+  font-size: 250%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#about h2 {
+  display: flex;
+  font-size: 150%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#about h3 {
+  display: flex;
+  font-size: 250%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

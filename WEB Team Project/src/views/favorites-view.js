@@ -10,16 +10,15 @@ export const toFavoritesView = async (favGifsId) => {
     return `<div id="no-favorites">
     <h1>Favorite GIFs:</h1>
     <h2>Add some GIFs to favorites to see them here.</h2>
-    <li class="randomGif">
-    <img src="${result.images.fixed_width.url}" width="150" height="150" alt="${result.title}"
-    <div class="gif-details">
-    </div>
+    <li class="random-gif">
+    <img src="${result.images.fixed_width.url}" alt="${result.title}" data-gif-id="${result.id}" 
+    onclick="location.href='#/random/${result.id}'" style="cursor: pointer;" width="150" height="150">
     </li>
     </div>`;
   }
 
   const favGifsIds = getFavorites().join(', ');
-  // console.log(favGifsIds);
+
   const favGifs = await fetchFavorites(favGifsIds);
 
   return `
@@ -28,7 +27,8 @@ export const toFavoritesView = async (favGifsId) => {
     <ul class="content">
       ${favGifs.map(gif => gif ? `
         <li class="gif-item">
-          <img src="${gif.images.fixed_height.url}" alt="${gif.title}">
+        <img src="${gif.images.fixed_height.url}" alt="${gif.title}" data-gif-id="${gif.id}" 
+        onclick="location.href='#/favorites/${gif.id}'" style="cursor: pointer;" />
           ${renderFavoriteStatus(gif.id)}
         </li>
         ` : '<p>GIF cannot load</p>').join('')}
