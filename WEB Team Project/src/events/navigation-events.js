@@ -32,9 +32,6 @@ export const loadPage = (page = '') => {
     setActiveNav(ABOUT);
     return renderAbout();
 
-  case UPLOAD:
-    setActiveNav(UPLOAD);
-    return renderUpload();
     /* if the app supports error login, use default to log mapping errors */
   default: return null;
   }
@@ -42,7 +39,6 @@ export const loadPage = (page = '') => {
 };
 
 // private functions
-
 
 
 const renderTrending = async () => {
@@ -80,4 +76,4 @@ export const renderDetails = async (id) => {
     q('#popup-container').style.display = 'none'; // Hide the popup
   });
 
-}
+};
