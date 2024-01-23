@@ -186,7 +186,6 @@ span.favorite:hover {
 .gif-img-item {
   border-radius: 10px;
   margin: 10px;
-  /* transition: all 0.5; */
   width: 290px;
   height: 260px;
 }
@@ -211,24 +210,25 @@ span.favorite:hover {
   min-width: 50%;
   background: linear-gradient(315deg, #b621fe 0%, #1fd1f9 98%);
   padding: 30px 15px;
-  color: white(0, 0, 0);
-  border-right: rgb(0, 0, 0) solid;
+  color: white;
+  border-right: black solid;
   border-radius: 25px;
+  height: 550px;
   overflow: auto;
 }
 
 /*Uploaded gifs outer container*/
 .uploaded-container-outer {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  /* flex-wrap: wrap; */
+  /* flex-direction: row; */
   margin-top: 20px;
   min-width: 50%;
   padding: 30px 15px;
   background: linear-gradient(315deg, #1fd1f9 0%, #b621fe 90%);
   color: white;
   border-radius: 25px;
-  height: 500px;
-  text-align: center;
+  height: 550px;
   letter-spacing: 2px;
   overflow: auto;
 }
@@ -241,12 +241,11 @@ span.favorite:hover {
 
 /*Uploaded gifs inner container*/
 .uploaded-container-inner {
-  margin-top: 10px;
-  padding-top: 20px;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content:center;
   overflow: auto;
 }
 
@@ -255,11 +254,10 @@ span.favorite:hover {
   /* Hide scrollbar */
 }
 
-
 /*Uploaded GIF*/
 .uploaded-gif {
   border-radius: 20px;
-  margin: auto 3px;
+  margin: 5px;
   width: auto;
   height: 200px;
 }
@@ -275,7 +273,7 @@ span.favorite:hover {
   border: 2px solid white;
   letter-spacing: 3px;
   border-radius: 20px;
-  padding: 20px 30px;
+  padding: 30px 30px;
 }
 
 /*Form labels*/
@@ -713,3 +711,4 @@ span.favorite:hover {
   flex-wrap: wrap;
   list-style: none;
 }
+
