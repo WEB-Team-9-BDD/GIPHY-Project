@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (favorite.classList.contains('active')) {
         renderFavorites();
       }
-      //toggleFavoriteStatus(+event.target.getAttribute('data-gif-id'));
     }
 
     // toggle details event
@@ -44,6 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (event.target.classList.contains('upload-page')) {
       renderUploadedGifs();
+    }
+
+    if (event.target.classList.contains('project-logo')) {
+      loadPage(TRENDING);
     }
   });
 
