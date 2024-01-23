@@ -241,7 +241,8 @@ span.favorite:hover {
 
 /*Uploaded gifs inner container*/
 .uploaded-container-inner {
-  margin-top: 20px;
+  margin-top: 10px;
+  padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -266,7 +267,6 @@ span.favorite:hover {
 .uploaded-gif:hover {
   transform: scale(1.1);
   border: 3px solid white;
-  position: initial;
 }
 
 /*Nothing uploaded text*/
@@ -283,7 +283,6 @@ span.favorite:hover {
   margin-left: 10px;
   font-size: 25px;
   padding: 3px;
-  /* font-weight: bold; */
 }
 
 /*Form input fields*/
@@ -296,7 +295,7 @@ span.favorite:hover {
   padding-left: 20px;
 }
 
-.upload-container>h2 {
+.upload-container h2 {
   text-align: center;
   letter-spacing: 2px;
 }
