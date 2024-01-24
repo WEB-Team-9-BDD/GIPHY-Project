@@ -68,6 +68,7 @@ export const loadTrendingGifs = async () => {
  * @returns {Promise<object>} - A Promise that resolves to the data of the random GIF.
  */
 
+// eslint-disable-next-line consistent-return
 export const loadRandomGif = async () => {
   try {
     const response = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=&rating=g`);
@@ -100,7 +101,7 @@ export const fetchFavorites = async (gifIds) => {
  * Fetches and returns the details of a gif by its ID.
  *
  * @param {string} id - The ID of the gif.
- * @returns {Promise<Object>} A promise that resolves to the gif details.
+ * @return {Promise<Object>} A promise that resolves to the gif details.
  * @throws {Error} If the fetch operation fails.
  */
 export const loadDetails = async (id) => {
@@ -131,25 +132,25 @@ export const loadUploadedGifs = async () => {
 
 export const loadGifByName = async (name) => {
   let endpoint;
-  
+
   switch (name) {
-    case 'Borislav':
-      endpoint = getBobiGif();
-      break;
-    case 'Danko':
-      endpoint = getDankoGif();
-      break;
-    case 'Dayana':
-      endpoint = getDayanaGif();
-      break;
-    default:
-      throw new Error(`Unknown name: ${name}`);
+  case 'Borislav':
+    endpoint = getBobiGif();
+    break;
+  case 'Danko':
+    endpoint = getDankoGif();
+    break;
+  case 'Dayana':
+    endpoint = getDayanaGif();
+    break;
+  default:
+    throw new Error(`Unknown name: ${name}`);
   }
 
   const response = await fetch(endpoint);
   const result = await response.json();
 
   return result.data;
-}
+};
 
 
