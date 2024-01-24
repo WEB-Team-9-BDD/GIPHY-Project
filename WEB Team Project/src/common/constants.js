@@ -28,6 +28,10 @@ https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=${limit}&offset=
 export const getSearchGifs = (q='', limit = 20, offset = 0) => `
 https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${q}&limit=${limit}&offset=${offset}&rating=g`;
 
+/**
+ * Recieving random GIF
+ * @return {string} The endpoint link
+ */
 export const getRandomGifs = () => `
 https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=&rating=g`;
 
