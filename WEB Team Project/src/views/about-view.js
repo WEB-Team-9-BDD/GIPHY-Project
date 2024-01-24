@@ -14,7 +14,7 @@ export const toAboutView = () => `
 export const toGifAboutView = (gif) => {
   return `
     <div class="gif-about-view">
-      <img src="${gif.images.fixed_width.url}" alt="${gif.title}">     
+      <img class="details-image" src="${gif.images.fixed_width.url}" alt="${gif.title}">     
     </div>
   `;
 };
