@@ -46,6 +46,12 @@ https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=&rating=g`;
 export const getUploadedURL = (url = '', sourceUrl = '', tags) => `
 https://upload.giphy.com/v1/gifs?api_key=${API_KEY}&file=${url}&source_image_url=${sourceUrl}&tags=${tags}`;
 
+/**
+ * Constructs and returns a URL for fetching a GIF by its ID from the Giphy API.
+ *
+ * @param {string} id - The ID of the GIF to fetch.
+ * @returns {string} The URL for fetching the GIF.
+ */
 export const getGifByID = (id) => `https://api.giphy.com/v1/gifs/${id}?api_key=${API_KEY}&rating=g`;
 
 /**
@@ -56,9 +62,22 @@ export const getGifByID = (id) => `https://api.giphy.com/v1/gifs/${id}?api_key=$
 export const uploadedIdsEndpoint = (...ids) => `
 https://upload.giphy.com/v1/gifs?api_key=${API_KEY}&ids=${ids}`;
 
+/**
+ * Constructs and returns a URL for fetching a specific GIF (Bobi) from the Giphy API.
+ *
+ * @returns {string} The URL for fetching the Bobi GIF.
+ */
+export const getBobiGif = () => `https://api.giphy.com/v1/gifs/111ebonMs90YLu?api_key=${API_KEY}&rating=g`;
 
-export const getBobiGif = () => `https://api.giphy.com/v1/gifs/0lGd2OXXHe4tFhb7Wh?api_key=${API_KEY}&rating=g`;
+/**
+ * Constructs and returns a URL for fetching a specific GIF (Dayana) from the Giphy API.
+ *
+ * @returns {string} The URL for fetching the Dayana GIF.
+ */
+export const getDayanaGif = () => `https://api.giphy.com/v1/gifs/wGEymBvo6FUlR9bbda?api_key=${API_KEY}&rating=g`;
 
-export const getDayanaGif = () => `https://api.giphy.com/v1/gifs/2IudUHdI075HL02Pkk?api_key=${API_KEY}&rating=g`;
-
-export const getDankoGif = () => `https://api.giphy.com/v1/gifs/CuuSHzuc0O166MRfjt?api_key=${API_KEY}&rating=g`;
+/**
+ * Returns the URL for the Danko GIF.
+ * @returns {string} The URL for the Danko GIF.
+ */
+export const getDankoGif = () => `https://api.giphy.com/v1/gifs/67ThRZlYBvibtdF9JH?api_key=${API_KEY}&rating=g`;

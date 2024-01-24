@@ -116,6 +116,11 @@ export const renderDetails = async (id) => {
 
 };
 
+/**
+ * Renders the about GIF popup with the given GIF name.
+ * @param {string} name - The name of the GIF.
+ * @returns {Promise<void>} - A promise that resolves when the about GIF popup is rendered.
+ */
 export const renderAboutGif = async (name) => {
   const gif = await loadGifByName(name);
 

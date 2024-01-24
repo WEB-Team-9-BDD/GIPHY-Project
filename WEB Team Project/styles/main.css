@@ -93,31 +93,7 @@ a.active {
   font-weight: bold;
 }
 
-span.favorite {
-  padding-left: 10px;
-  cursor: pointer;
-}
 
-span.favorite.active {
-  color: rgb(255, 0, 149);
-}
-
-span.favorite:hover {
-  color: rgb(187, 135, 255)
-}
-
-/* End template styling */
-
-
-
-/* Add your styles below */
-
-
-/* Homepage styles */
-
-
-
-/* End homepage styles */
 /* NEW STYLES */
 
 .nav-links {
@@ -190,6 +166,15 @@ span.favorite:hover {
   margin-top: 10px;
   margin-bottom: 25px;
   padding: 10px;
+}
+
+.upload-page {
+  margin-left: -10px;
+  border-radius: 10px;
+  justify-content: center;
+  border: 3px solid ;
+  margin: -7px;
+  padding: 5px;
 }
 
 /*Gif upload container*/
@@ -554,11 +539,6 @@ span.favorite:hover {
   max-width: 300px;
   max-height: 600px;
   border-radius: 15px;
-  /* Simplified border-radius */
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
   overflow: auto;
   display: none;
 
@@ -582,7 +562,6 @@ span.favorite:hover {
   cursor: pointer;
   transition: 0.25s;
   border: 2px solid white;
-  /* Add a border */
   z-index: 1;
   border-radius: 50%;
   float: right;
@@ -776,15 +755,14 @@ span.favorite:hover {
   color: white;
 }
 
-#about h2 {
+.about-autors {
   position: absolute;
-  left: 300px;
-  display: flex;
+  left: 15%;
+  bottom: 20%; 
   font-size: 150%;
-  text-align: center;
+  text-align: left;
   align-items: center;
   justify-content: center;
-  align-items: center;
   color: white;
 }
 
@@ -799,9 +777,9 @@ span.favorite:hover {
 }
 
 #about h3 {
-  position: absolute; /* Add this */
-  right: 15%; /* Add this */
-  bottom: 2%; /* Add this */
+  position: absolute;
+  right: 15%;
+  bottom: 2%;
   display: flex;
   font-size: 250%;
   text-align: center;
@@ -857,13 +835,4 @@ span.favorite:hover {
   height: 460px;
   object-fit: cover;
   margin-top: -35px;
-}
-
-.upload-page {
-  margin-left: -10px;
-  border-radius: 10px;
-  justify-content: center;
-  border: 3px solid ;
-  margin: -7px;
-  padding: 5px;
 }

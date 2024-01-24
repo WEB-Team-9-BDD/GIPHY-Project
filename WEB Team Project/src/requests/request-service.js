@@ -130,6 +130,12 @@ export const loadUploadedGifs = async () => {
   return result.data;
 };
 
+/**
+ * Loads a GIF by name.
+ * @param {string} name - The name of the GIF.
+ * @returns {Promise<Array>} - A promise that resolves to an array of GIF data.
+ * @throws {Error} - If the name is unknown.
+ */
 export const loadGifByName = async (name) => {
   let endpoint;
 
