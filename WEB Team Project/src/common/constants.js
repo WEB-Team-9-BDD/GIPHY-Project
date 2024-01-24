@@ -55,3 +55,10 @@ export const getGifByID = (id) => `https://api.giphy.com/v1/gifs/${id}?api_key=$
  */
 export const uploadedIdsEndpoint = (...ids) => `
 https://upload.giphy.com/v1/gifs?api_key=${API_KEY}&ids=${ids}`;
+
+
+export const getBobiGif = () => `https://api.giphy.com/v1/gifs/0lGd2OXXHe4tFhb7Wh?api_key=${API_KEY}&rating=g`;
+
+export const getDayanaGif = () => `https://api.giphy.com/v1/gifs/2IudUHdI075HL02Pkk?api_key=${API_KEY}&rating=g`;
+
+export const getDankoGif = () => `https://api.giphy.com/v1/gifs/CuuSHzuc0O166MRfjt?api_key=${API_KEY}&rating=g`;

@@ -766,6 +766,7 @@ span.favorite:hover {
 }
 
 /*About app view*/
+
 #about h1 {
   display: flex;
   font-size: 250%;
@@ -777,6 +778,8 @@ span.favorite:hover {
 }
 
 #about h2 {
+  position: absolute;
+  left: 300px;
   display: flex;
   font-size: 150%;
   text-align: center;
@@ -786,7 +789,20 @@ span.favorite:hover {
   color: white;
 }
 
+.author {
+  color: rgb(95, 191, 255);
+  text-decoration: underline;
+  font-size: 32px;
+}
+
+.author:hover {
+  color: rgb(198, 115, 247);
+}
+
 #about h3 {
+  position: absolute; /* Add this */
+  right: 15%; /* Add this */
+  bottom: 2%; /* Add this */
   display: flex;
   font-size: 250%;
   text-align: center;
@@ -794,6 +810,54 @@ span.favorite:hover {
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+
+
+#gif-about-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  padding: 5px;
+  background: rgba(53, 50, 50, 0.5);
+  width: 500px;
+  height: 500px;
+  max-width: 600px;
+  max-height: 600px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif-about-view {
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.welcome {
+  font-size: 200%;
+  text-align: center;
+  width: 50%; 
+  width: 50%; 
+  margin: 50px auto 0; 
+}
+
+
+
+#gif-about-popup img {
+  border-radius: 15px;
+  width: 460px;
+  height: 460px;
+  object-fit: cover;
+  margin-top: -35px;
 }
 
 .upload-page {

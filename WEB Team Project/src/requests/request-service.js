@@ -1,4 +1,4 @@
-import { API_KEY, uploadedIdsEndpoint } from '../common/constants.js';
+import { API_KEY, getBobiGif, getDankoGif, getDayanaGif, uploadedIdsEndpoint } from '../common/constants.js';
 import { getSearchGifs, getTrendingURL, getUploadedURL, getGifByID } from '../common/constants.js';
 import { addUploadedGif, getUploadedIds, renderFailure, renderSuccess, renderUploadedGifs } from '../events/upload-events.js';
 
@@ -128,4 +128,28 @@ export const loadUploadedGifs = async () => {
 
   return result.data;
 };
+
+export const loadGifByName = async (name) => {
+  let endpoint;
+  
+  switch (name) {
+    case 'Borislav':
+      endpoint = getBobiGif();
+      break;
+    case 'Danko':
+      endpoint = getDankoGif();
+      break;
+    case 'Dayana':
+      endpoint = getDayanaGif();
+      break;
+    default:
+      throw new Error(`Unknown name: ${name}`);
+  }
+
+  const response = await fetch(endpoint);
+  const result = await response.json();
+
+  return result.data;
+}
+
 
