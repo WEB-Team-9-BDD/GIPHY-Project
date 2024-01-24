@@ -33,6 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // toggle favorite event
+    /**
+ * Event handler for toggling the favorite status of a GIF when the "add-favorite-btn" element is clicked.
+ * @param {Event} event - The click event object.
+ * @returns {void}
+ */
     if (event.target.classList.contains('add-favorite-btn')) {
       const gifId = event.target.getAttribute('data-gif-id');
       toggleFavoriteStatus(gifId);

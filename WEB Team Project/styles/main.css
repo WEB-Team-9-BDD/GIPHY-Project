@@ -673,6 +673,8 @@ span.favorite:hover {
   color: #ff0000;
 }
 
+/*Favorite view*/
+
 #no-favorites h1 {
   display: flex;
   font-size: 250%;
@@ -733,9 +735,7 @@ span.favorite:hover {
 .gif-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /* 5 per row */
   grid-gap: 10px;
-  /* gap between all gifs */
   align-items: center;
   justify-content: center;
   list-style: none;

@@ -3,6 +3,13 @@ import { API_KEY } from '../common/constants.js';
 import { fetchFavorites, loadRandomGif } from '../requests/request-service.js';
 import { getFavorites } from '../data/favorites.js';
 
+/**
+ * Renders the favorites view, displaying a list of favorite GIFs along with their favorite status buttons.
+ * If there are no favorite GIFs, it shows a message and a random GIF example.
+ * @param {number[]} favGifsId - An array containing the IDs of the favorite GIFs.
+ * @returns {Promise<string>} - HTML markup representing the favorites view.
+ */
+
 export const toFavoritesView = async (favGifsId) => {
   const result = await loadRandomGif();
 

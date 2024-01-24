@@ -44,6 +44,10 @@ const renderTrending = async () => {
   q(CONTAINER_SELECTOR).innerHTML = toTrendingView(trendingGifs);
 };
 
+/**
+ * Favorite age rendering function
+ */
+
 export const renderFavorites = async () => {
   const favorites = getFavorites();
 

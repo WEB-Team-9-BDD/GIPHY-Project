@@ -63,6 +63,11 @@ export const loadTrendingGifs = async () => {
   return result.data;
 };
 
+/**
+ * Loads a random GIF using the Giphy API.
+ * @returns {Promise<object>} - A Promise that resolves to the data of the random GIF.
+ */
+
 export const loadRandomGif = async () => {
   try {
     const response = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=&rating=g`);
@@ -73,6 +78,12 @@ export const loadRandomGif = async () => {
     console.error('Error fetching random GIF', error);
   }
 };
+
+/**
+ * Fetches GIFs by their IDs from the Giphy API.
+ * @param {string} gifIds - A comma-separated string of GIF IDs to fetch.
+ * @returns {Promise<object[]>} - A Promise that resolves to an array of GIF data objects.
+ */
 
 export const fetchFavorites = async (gifIds) => {
   try {
