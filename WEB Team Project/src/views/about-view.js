@@ -1,6 +1,6 @@
 /**
  * Generates the HTML markup for the About View.
- * @returns {string} The HTML markup for the About View.
+ * @return {string} The HTML markup for the About View.
  */
 export const toAboutView = () => `
 <div id="about">
@@ -17,7 +17,7 @@ export const toAboutView = () => `
 /**
  * Converts a GIF object into an HTML string representing the about view of the GIF.
  * @param {Object} gif - The GIF object.
- * @returns {string} - The HTML string representing the about view of the GIF.
+ * @return {string} - The HTML string representing the about view of the GIF.
  */
 export const toGifAboutView = (gif) => {
   return `
