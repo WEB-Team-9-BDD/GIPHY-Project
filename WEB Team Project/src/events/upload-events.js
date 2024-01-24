@@ -71,8 +71,8 @@ export const addUploadedGif = (gifId) => {
  * returns them using the localStorage.
  */
 export const renderUploadedGifs = async () => {
-  const uploadedGifs = await loadUploadedGifs();
   if (uploadedIdsArray.length > 0) {
+    const uploadedGifs = await loadUploadedGifs();
     q('.uploaded-container-inner').innerHTML = toUploadedView(uploadedGifs);
   } else {
     q('.uploaded-container-inner').innerHTML = toEmptyUploadedView();
