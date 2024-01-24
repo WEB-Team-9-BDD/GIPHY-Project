@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (event.target.classList.contains('project-logo')) {
 
       document.querySelector('#popup-container').style.display = 'none';
-      
+
       loadPage(TRENDING);
     }
   });

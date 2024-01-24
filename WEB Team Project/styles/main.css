@@ -586,7 +586,6 @@ span.favorite:hover {
   z-index: 1;
   border-radius: 50%;
   float: right;
-
 }
 
 #close-popup::before {

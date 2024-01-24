@@ -11,10 +11,10 @@ export const toAboutView = () => `
 </div>
 `;
 
-export const toGifAboutView = (gif) => {  
+export const toGifAboutView = (gif) => {
   return `
     <div class="gif-about-view">
       <img src="${gif.images.fixed_width.url}" alt="${gif.title}">     
     </div>
   `;
-}
+};

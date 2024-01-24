@@ -1,5 +1,11 @@
 import { renderFavoriteStatus } from '../events/favorites-events.js';
 
+/**
+ * Converts an array of trending GIFs into HTML markup for the trending view.
+ * @param {object[]} trendingGifs - An array of trending GIF objects.
+ * @returns {string} - HTML markup representing the trending view.
+ */
+
 export const toTrendingView = (trendingGifs) => {
   return `
       <section class="trending">
@@ -11,6 +17,11 @@ export const toTrendingView = (trendingGifs) => {
     `;
 };
 
+/**
+ * Converts a single trending GIF item into HTML markup for the trending view.
+ * @param {object} trendingItem - A single trending GIF object.
+ * @returns {string} - HTML markup representing the trending item view.
+ */
 
 const toTrendingItemView = (trendingItem) => {
   return `
@@ -22,10 +33,10 @@ const toTrendingItemView = (trendingItem) => {
                onclick="location.href='#/trending/${trendingItem.id}'
                " style="cursor: pointer;" />
                 </a>
-                <div class="add-favorite-btn">${renderFavoriteStatus(
-                  trendingItem.id
-                )}</div> 
+                <div class="add-favorite-btn">${renderFavoriteStatus(trendingItem.id)}
+    </div> 
           </div>       
       </li>
   `;
-}
+};
+
